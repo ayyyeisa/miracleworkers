@@ -5,12 +5,12 @@ import Navbar from "./components/Navbar";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 // Pages
-import Home from "./pages";
-import About from "./pages/about";
-import Blogs from "./pages/blogs";
-import SignUp from "./pages/signup";
-import Contact from "./pages/contact";
-import PageFramework from "./pages/framework";
+import Home from "./pages/dummy3";
+import About from "./pages/sellerLandingPage";
+import Blogs from "./pages/customerLandingPage";
+import SignUp from "./pages/dummy4";
+import Contact from "./pages/dummy1";
+import PageFramework from "./pages/dummy2";
  
 function App() {
     return (
