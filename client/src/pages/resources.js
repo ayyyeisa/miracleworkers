@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
     return (
         <div>
-            <h1>Welcome to CAT 3DCP Digital Marketplace</h1>
+            <h1>Insert Resources Stuff Here</h1>
         </div>
     );
 };

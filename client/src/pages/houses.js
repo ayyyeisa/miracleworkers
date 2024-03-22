@@ -1,13 +1,13 @@
 import React from "react";
  
-const SellLandingPage = () => {
+const Houses = () => {
     return (
         <div>
             <h1>
-                Whatever you want to put here
+                Insert Houses Stuff Here
             </h1>
         </div>
     );
 };
  
-export default SellLandingPage;
+export default Houses;

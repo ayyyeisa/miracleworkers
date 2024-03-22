@@ -1,13 +1,13 @@
 import React from "react";
  
-const SellLandingPage = () => {
+const Dummy6 = () => {
     return (
         <div>
             <h1>
-                Whatever you want to put here
+                Insert Structures Stuff Here
             </h1>
         </div>
     );
 };
  
-export default SellLandingPage;
+export default Dummy6;
