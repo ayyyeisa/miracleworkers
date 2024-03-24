@@ -1,28 +1,51 @@
 import React from "react";
 import { Nav, NavLink, NavMenu } from "./NavbarElements";
  
-const Navbar = () => {
+export const BuyerNavBar = () => {
     return (
         <Nav>
             <NavMenu>
-            <NavLink to="/" activeStyle>
-                    Home
+                <NavLink to="/houses" activeStyle>
+                    Houses
                 </NavLink>
-                <NavLink to="/about" activeStyle>
-                    About
+                <NavLink to="/structures" activeStyle>
+                    Structures
                 </NavLink>
-                <NavLink to="/contact" activeStyle>
-                    Contact Us
+                <NavLink to="/brands" activeStyle>
+                    Brands
                 </NavLink>
-                <NavLink to="/blogs" activeStyle>
-                    Blogs
+                <NavLink to="/resources" activeStyle>
+                    Resources
                 </NavLink>
-                <NavLink to="/sign-up" activeStyle>
-                    Sign Up
+                <NavLink to="/company" activeStyle>
+                    Company
                 </NavLink>
             </NavMenu>
         </Nav>
     );
 };
 
-export default Navbar;
+export const SellerNavBar = () =>
+{
+    return (
+        <Nav>
+            <NavMenu>
+                <NavLink to="/InsertLink" activeStyle>
+                    Insert Link Name
+                </NavLink>
+                <NavLink to="/InsertLink" activeStyle>
+                    Insert Link Name
+                </NavLink>
+                <NavLink to="/InsertLink" activeStyle>
+                    Insert Link Name
+                </NavLink>
+                <NavLink to="/InsertLink" activeStyle>
+                    Insert Link Name
+                </NavLink>
+                <NavLink to="/InsertLink" activeStyle>
+                    Insert Link Name
+                </NavLink>
+            </NavMenu>
+        </Nav>
+    );
+}

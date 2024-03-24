@@ -1,39 +1,54 @@
 import React from "react";
 
 // Components
-import Navbar from "./components/Navbar";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 // Pages
-import Home from "./pages/dummy3";
-import SellerLandingPage from "./pages/sellerLandingPage";
-import Blogs from "./pages/customerLandingPage";
-import SignUp from "./pages/dummy4";
-import Contact from "./pages/dummy1";
-import PageFramework from "./pages/dummy2";
+import Seller from "./pages/sellerLandingPage";
+import {BuyerPageFramework, SellerPageFramework} from "./pages/Pageframework";
+import Page from "./pages/DefaultPage";
+import Structures from "./pages/structures";
+import Brands from "./pages/brands";
+import Company from "./pages/company";
+import Houses from "./pages/houses";
+import Resources from "./pages/resources";
  
 function App() {
+
     return (
         <Router>
             <Routes>
-                <Route 
-                    exact path="/" 
-                    element={<PageFramework component={<Home/>} />} />
-                <Route 
-                    path="/about" 
-                    element={<PageFramework component={<SellerLandingPage/>} />} />
                 <Route
-                    path="/contact"
-                    element={<PageFramework component={<Contact/>} />} />
-                <Route 
-                    path="/blogs" 
-                    element={<PageFramework component={<Blogs/>} />} />
+                    exact path="/" //Path for it to be added too
+                    element={<Page/>} />
                 <Route
-                    path="/sign-up"
-                    element={<PageFramework component={<SignUp/>} />} />
+                    exact path="/seller" //Path for it to be added too
+                    element={<SellerPageFramework component={<Seller />}/>} />
+                <Route
+                    exact path="/buyer" //Path for it to be added too
+                    element={<BuyerPageFramework component={<Houses />} />} />
+                <Route
+                    path="/houses" //Path for it to be added too
+                    element={<BuyerPageFramework component={<Houses />} />} />   
+                <Route
+                    path="/structures" //Path for it to be added too
+                    element={<BuyerPageFramework component={<Structures />} />} />     
+                <Route
+                    path="/brands" //Path for it to be added too
+                    element={<BuyerPageFramework component={<Brands />} />} />
+                <Route
+                    path="/resources" //Path for it to be added too
+                    element={<BuyerPageFramework component={<Resources />} />} />
+                <Route
+                    path="/company" //Path for it to be added too
+                    element={<BuyerPageFramework component={<Company />} />} />       
             </Routes>
         </Router>
     );
 }
- 
+/*
+<Route
+    path="/about" //Path for it to be added too
+    element={<PageFramework component={<Buyer />} />} />
+*/
 export default App;
