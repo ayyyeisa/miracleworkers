@@ -8,10 +8,22 @@ import React from "react";
 const Houses = () => {
     return (
         <div>
+                <img src="https://capestone.com/media/2022/05/Website-header-CAT.jpg"alt="image"></img>
+           
             <h1>
-                Insert Houses Stuff Here
+                Just Added
+            </h1>
+            <h1>
+                Good Fit for Your Company
+            </h1>
+            <h1>
+                Smart Home Collection
+            </h1>
+            <h1>
+                Tiny Home
             </h1>
         </div>
+
     );
 };
 
