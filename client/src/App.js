@@ -12,7 +12,12 @@ import Brands from "./pages/brands";
 import Company from "./pages/company";
 import Houses from "./pages/houses";
 import Resources from "./pages/resources";
- 
+import Discover from "./pages/discover";
+import Design from "./pages/design";
+import Construct from "./pages/construct";
+import Community from "./pages/community";
+import Support from "./pages/support";
+
 function App() {
 
     return (
@@ -41,7 +46,22 @@ function App() {
                     element={<BuyerPageFramework component={<Resources />} />} />
                 <Route
                     path="/company" //Path for it to be added too
-                    element={<BuyerPageFramework component={<Company />} />} />       
+                    element={<BuyerPageFramework component={<Company />} />} />    
+                <Route
+                    path="/discover" //Path for it to be added too
+                    element={<SellerPageFramework component={<Discover />} />} />
+                <Route
+                    path="/design" //Path for it to be added too
+                    element={<SellerPageFramework component={<Design />} />} />
+                <Route
+                    path="/construct" //Path for it to be added too
+                    element={<SellerPageFramework component={<Construct />} />} />
+                <Route
+                    path="/community" //Path for it to be added too
+                    element={<SellerPageFramework component={<Community />} />} />
+                <Route
+                    path="/support" //Path for it to be added too
+                    element={<SellerPageFramework component={<Support />} />} />
             </Routes>
         </Router>
     );
