@@ -5,6 +5,9 @@ export const BuyerNavBar = () => {
     return (
         <Nav>
             <NavMenu>
+                <NavLink to="/customerLandingPage" activeStyle>
+                    Landing Page
+                </NavLink>
                 <NavLink to="/houses" activeStyle>
                     Houses
                 </NavLink>
