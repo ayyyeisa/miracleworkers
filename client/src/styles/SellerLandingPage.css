@@ -13,9 +13,9 @@
     bottom: 32px;
     left: 40px;
     font-size: 32px;
+    font-weight: bold;
   }
   .spunchbob { 
-
     width: 50%;
     opacity: 0.5;
     z-index: -1;
@@ -23,6 +23,26 @@
     border-radius: 30px;
     padding: 15px;
   }
+
+  .header_image { 
+    width: 50%;
+    opacity: 0.5;
+    z-index: -1;
+    max-height: 200px;
+    border-radius: 30px;
+    padding: 15px;
+  }
+
+  li{
+    float: left;
+  }
+
+  ul{
+    list-style-type: none;
+    overflow: hidden;
+  }
+
+
 
     
 

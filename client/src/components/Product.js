@@ -5,10 +5,10 @@ function Product({name, image, link}) {
 //make this whole thing a button/link?
     return(
         <div className="product">
-            <div className="product_info">
+        <img src={image} alt="" />
+        <div className="product_info">
                 <p>{name}</p>
-            </div>
-        <img src={image} alt="" /> 
+            </div> 
         </div>
     );
 }
