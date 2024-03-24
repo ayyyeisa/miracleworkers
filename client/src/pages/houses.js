@@ -1,5 +1,10 @@
+/// <summary>
+/// Authors: Jason Shull
+/// Description: Script contains how the Houses webpage will be formated
+/// </summary>
+
 import React from "react";
- 
+
 const Houses = () => {
     return (
         <div>
@@ -9,5 +14,5 @@ const Houses = () => {
         </div>
     );
 };
- 
+
 export default Houses;

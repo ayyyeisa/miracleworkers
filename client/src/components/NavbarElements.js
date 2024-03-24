@@ -1,7 +1,12 @@
+/// <summary>
+/// Authors: 
+/// Description: This script handles how the elements for the navbar is setup
+/// </summary>
+
 import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
- 
+
 export const Nav = styled.nav`
     background: #ffc700;
     height: 85px;
@@ -10,7 +15,7 @@ export const Nav = styled.nav`
     padding: 0.2rem calc((100vw - 1000px) / 2);
     z-index: 12;
 `;
- 
+
 export const NavLink = styled(Link)`
     color: #000000;
     display: flex;
@@ -37,7 +42,7 @@ export const Bars = styled(FaBars)`
         cursor: pointer;
     }
 `;
- 
+
 export const NavMenu = styled.div`
     display: flex;
     align-items: center;

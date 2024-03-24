@@ -1,5 +1,10 @@
+/// <summary>
+/// Authors: Jason Shull
+/// Description: Script contains how the Home webpage will be formated
+/// </summary>
+
 import React from "react";
- 
+
 const Home = () => {
     return (
         <div>
@@ -7,5 +12,5 @@ const Home = () => {
         </div>
     );
 };
- 
+
 export default Home;
