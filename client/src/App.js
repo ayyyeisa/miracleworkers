@@ -1,11 +1,16 @@
+/// <summary>
+/// Authors: Jason Shull, Parker Libby
+/// Description: This sript handles all of the links that the files need to navigate to
+/// </summary>
+
 import React from "react";
 
 // Components
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages
 import Seller from "./pages/sellerLandingPage";
-import {BuyerPageFramework, SellerPageFramework} from "./pages/Pageframework";
+import { BuyerPageFramework, SellerPageFramework } from "./pages/Pageframework";
 import Page from "./pages/DefaultPage";
 import Structures from "./pages/structures";
 import Brands from "./pages/brands";
@@ -25,19 +30,19 @@ function App() {
             <Routes>
                 <Route
                     exact path="/" //Path for it to be added too
-                    element={<Page/>} />
+                    element={<Page />} />
                 <Route
                     exact path="/seller" //Path for it to be added too
-                    element={<SellerPageFramework component={<Seller />}/>} />
+                    element={<SellerPageFramework component={<Seller />} />} />
                 <Route
                     exact path="/buyer" //Path for it to be added too
                     element={<BuyerPageFramework component={<Houses />} />} />
                 <Route
                     path="/houses" //Path for it to be added too
-                    element={<BuyerPageFramework component={<Houses />} />} />   
+                    element={<BuyerPageFramework component={<Houses />} />} />
                 <Route
                     path="/structures" //Path for it to be added too
-                    element={<BuyerPageFramework component={<Structures />} />} />     
+                    element={<BuyerPageFramework component={<Structures />} />} />
                 <Route
                     path="/brands" //Path for it to be added too
                     element={<BuyerPageFramework component={<Brands />} />} />
@@ -66,9 +71,5 @@ function App() {
         </Router>
     );
 }
-/*
-<Route
-    path="/about" //Path for it to be added too
-    element={<PageFramework component={<Buyer />} />} />
-*/
+
 export default App;
