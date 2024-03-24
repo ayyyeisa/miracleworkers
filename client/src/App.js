@@ -6,7 +6,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 // Pages
 import Home from "./pages/dummy3";
-import About from "./pages/sellerLandingPage";
+import SellerLandingPage from "./pages/sellerLandingPage";
 import Blogs from "./pages/customerLandingPage";
 import SignUp from "./pages/dummy4";
 import Contact from "./pages/dummy1";
@@ -21,7 +21,7 @@ function App() {
                     element={<PageFramework component={<Home/>} />} />
                 <Route 
                     path="/about" 
-                    element={<PageFramework component={<About/>} />} />
+                    element={<PageFramework component={<SellerLandingPage/>} />} />
                 <Route
                     path="/contact"
                     element={<PageFramework component={<Contact/>} />} />

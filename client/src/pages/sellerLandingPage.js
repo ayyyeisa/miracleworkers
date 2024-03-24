@@ -1,13 +1,13 @@
 import React from "react";
  
-const About = () => {
+const SellerLandingPage = () => {
     return (
         <div>
             <h1>
-                About Page Text
+                This is the seller landing page.
             </h1>
         </div>
     );
 };
  
-export default About;
+export default SellerLandingPage;
