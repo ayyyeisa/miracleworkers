@@ -26,4 +26,4 @@ const customerLandingPage = () => {
     );
 };
  
-export default Blogs;
+export default customerLandingPage;
