@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/customerLandingPage.css";
+import Product from "./Product";
  
 
 const customerLandingPage = () => 
@@ -15,6 +16,8 @@ const customerLandingPage = () =>
             alt=""
             />
 
+            <div className="customerlandingpage_row"
+            />
             </div>
         </div>
     );
