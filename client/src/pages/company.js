@@ -1,5 +1,10 @@
+/// <summary>
+/// Authors: Jason Shull
+/// Description: Script contains how the Company webpage will be formated
+/// </summary>
+
 import React from "react";
- 
+
 const SignUp = () => {
     return (
         <div>
@@ -7,5 +12,5 @@ const SignUp = () => {
         </div>
     );
 };
- 
+
 export default SignUp;
