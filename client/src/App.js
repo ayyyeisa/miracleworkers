@@ -17,7 +17,11 @@ import Brands from "./pages/brands";
 import Company from "./pages/company";
 import Houses from "./pages/houses";
 import Resources from "./pages/resources";
-
+import Discover from "./pages/discover";
+import Design from "./pages/design";
+import Construct from "./pages/construct";
+import Community from "./pages/community";
+import Support from "./pages/support";
 
 function App() {
 
