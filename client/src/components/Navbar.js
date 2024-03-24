@@ -1,11 +1,6 @@
-/// <summary>
-/// Authors: Jason Shull, Parker Libby
-/// Description: This sript handles all of the links that the files need to navigate to for the navbar
-/// </summary>
-
 import React from "react";
-import { Nav, NavLink, NavMenu, SmallNavMenu, smallNav, SmallNavLink } from "./NavbarElements";
-
+import { Nav, NavLink, NavMenu } from "./NavbarElements";
+ 
 export const BuyerNavBar = () => {
     return (
         <Nav>
@@ -30,44 +25,27 @@ export const BuyerNavBar = () => {
     );
 };
 
-export const SellerNavBar = () => {
+export const SellerNavBar = () =>
+{
     return (
         <Nav>
             <NavMenu>
-                <NavLink to="/Discover" activeStyle>
+                <NavLink to="/discover" activeStyle>
                     Discover
                 </NavLink>
-                <NavLink to="/Design" activeStyle>
+                <NavLink to="/design" activeStyle>
                     Design
                 </NavLink>
-                <NavLink to="/Construct" activeStyle>
+                <NavLink to="/construct" activeStyle>
                     Construct
                 </NavLink>
-                <NavLink to="/Community" activeStyle>
+                <NavLink to="/community" activeStyle>
                     Community
                 </NavLink>
-                <NavLink to="/Support" activeStyle>
+                <NavLink to="/support" activeStyle>
                     Support
                 </NavLink>
             </NavMenu>
         </Nav>
     );
-};
-
-export const SmallerSellerNavBar = () => {
-    return (
-        <smallNav>
-            <SmallNavMenu>
-                <SmallNavLink to="/My Account" activeStyle>
-                    My Account
-                </SmallNavLink>
-                <SmallNavLink to="/Location Editor" activeStyle>
-                    Location Editor
-                </SmallNavLink>
-                <SmallNavLink to="/Message Inbox" activeStyle>
-                    Message Inbox
-                </SmallNavLink>
-            </SmallNavMenu>
-        </smallNav>
-    );
-};
+}
