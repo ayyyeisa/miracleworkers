@@ -1,3 +1,8 @@
+/// <summary>
+/// Authors: Jason Shull
+/// Description: Script contains how the Seller webpage will be formated
+/// </summary>
+
 import React from "react";
 
 

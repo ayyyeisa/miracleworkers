@@ -1,5 +1,10 @@
+/// <summary>
+/// Authors: Jason Shull
+/// Description: Script contains how the Brand webpage will be formated
+/// </summary>
+
 import React from "react";
- 
+
 const About = () => {
     return (
         <div>
@@ -9,5 +14,5 @@ const About = () => {
         </div>
     );
 };
- 
+
 export default About;
