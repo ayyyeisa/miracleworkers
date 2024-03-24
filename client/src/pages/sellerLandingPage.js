@@ -4,21 +4,29 @@
 /// </summary>
 
 import React from "react";
-
+import "../styles/SellerLandingPage.css";
+import Product from "../components/Product";
 
  //Format for seller landing page
 const SellerLandingPage = () => {
     return (
-//navbar goes here
-        <div>
+        <div className="SellerLandingPage">
             <h1>
                 3D Printing Architectural Trends in 2026 
             </h1>
-                <img src="https://i.imgur.com/lmKI23l.png"alt="image"></img>
-           
+                <img className="spunchbob"
+                src="https://i.imgur.com/lmKI23l.png"alt=""></img>
+
             <h1>
                 Just Added
             </h1>
+            <div className="just_added">
+               <Product
+               name = "chair cat"
+               image = "https://i.imgur.com/CiM7qxD.png"
+               />
+            </div>
+
             <h1>
                 Good Fit for Your Company
             </h1>
