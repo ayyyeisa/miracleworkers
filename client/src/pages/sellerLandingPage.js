@@ -11,11 +11,11 @@ import Product from "../components/Product";
 const SellerLandingPage = () => {
     return (
         <div className="SellerLandingPage">
-            <h1>
-                3D Printing Architectural Trends in 2026 
-            </h1>
-                <img className="spunchbob"
-                src="https://i.imgur.com/lmKI23l.png"alt=""></img>
+
+            <div class="header">
+                <img className="spunchbob" src="https://i.imgur.com/lysIMu8.png" alt="spunchbob"/>
+                <div class="bottomleft">Architectural Trends in 2026</div>
+            </div>
 
             <h1>
                 Just Added
@@ -26,16 +26,6 @@ const SellerLandingPage = () => {
                image = "https://i.imgur.com/CiM7qxD.png"
                />
             </div>
-
-            <h1>
-                Good Fit for Your Company
-            </h1>
-            <h1>
-                Smart Home Collection
-            </h1>
-            <h1>
-                Tiny Home
-            </h1>
         </div>
 
     );

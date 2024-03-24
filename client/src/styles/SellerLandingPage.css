@@ -5,9 +5,30 @@
     margin-right: auto;
     max-width: 1500px;
   }
-  .spunchbob {
-    width: 30%;
-    z-index: -1;
-    margin-bottom: -150px;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  .header{
+    position: relative;
   }
+  .bottomleft {
+    position: absolute;
+    bottom: 32px;
+    left: 40px;
+    font-size: 32px;
+  }
+  .spunchbob { 
+
+    width: 50%;
+    opacity: 0.5;
+    z-index: -1;
+    max-height: 200px;
+    border-radius: 30px;
+    padding: 15px;
+  }
+
+    
+
+
+
+
+
+
+  
