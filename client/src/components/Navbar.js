@@ -34,45 +34,22 @@ export const SellerNavBar = () => {
     return (
         <Nav>
             <NavMenu>
-                <NavLink to="/Discover" activeStyle>
-                    Discover
-                </NavLink>
-                <NavLink to="/Design" activeStyle>
-                    Design
-                </NavLink>
-                <NavLink to="/Construct" activeStyle>
-                    Construct
+                <NavLink to="/InsertLink" activeStyle>
+                    Insert Link Name
                 </NavLink>
                 <NavLink to="/InsertLink" activeStyle>
-                    Community
+                    Insert Link Name
                 </NavLink>
-                <NavLink to="/Support" activeStyle>
-                    Support
+                <NavLink to="/InsertLink" activeStyle>
+                    Insert Link Name
+                </NavLink>
+                <NavLink to="/InsertLink" activeStyle>
+                    Insert Link Name
+                </NavLink>
+                <NavLink to="/InsertLink" activeStyle>
+                    Insert Link Name
                 </NavLink>
             </NavMenu>
         </Nav>
-    );
-}
-export const SmallerSellerNavBar = () => {
-    return (
-        <smallNav>
-            <NavMenu>
-                <NavLink to="/Discover" activeStyle>
-                    Discover
-                </NavLink>
-                <NavLink to="/Design" activeStyle>
-                    Design
-                </NavLink>
-                <NavLink to="/Construct" activeStyle>
-                    Construct
-                </NavLink>
-                <NavLink to="/InsertLink" activeStyle>
-                    Community
-                </NavLink>
-                <NavLink to="/Support" activeStyle>
-                    Support
-                </NavLink>
-            </NavMenu>
-        </smallNav>
     );
 }
