@@ -1,26 +1,16 @@
 import React from "react";
+import "../styles/customerLandingPage.css";
+//import Product from "../components/Product";
+//import SuggestedContent from "../components/SuggestedContent"
 
 //Format for customer landing page
 const customerLandingPage = () => {
     return (
-//navbar goes here
-//width="0" height="0" alt="
-        <div>
-            <h1>
-                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="alt="image"></img>
-            </h1>
-            <h1>
-                Just Added
-            </h1>
-            <h1>
-                Good Fit for Your Company
-            </h1>
-            <h1>
-                Smart Home Collection
-            </h1>
-            <h1>
-                Tiny Home
-            </h1>
+        <div className ="customerLandingPage"> 
+            <div class="header">
+                <img className="bigPhoto" src = "https://img1.rapidleaks.com/2019/12/Things-To-Do-In-Venice.jpg" width="1000" height="300"/>
+                <div class="bottomleft">Architectural Trends in 2026</div>
+            </div>
         </div>
 
     );

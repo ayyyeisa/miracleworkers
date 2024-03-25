@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages
 import Seller from "./pages/sellerLandingPage";
+import Buyer from "./pages/customerLandingPage";
 import { BuyerPageFramework, SellerPageFramework } from "./pages/Pageframework";
 import Page from "./pages/DefaultPage";
 import Structures from "./pages/structures";
@@ -36,7 +37,7 @@ function App() {
                     element={<SellerPageFramework component={<Seller />} />} />
                 <Route
                     exact path="/buyer" //Path for it to be added too
-                    element={<BuyerPageFramework component={<Houses />} />} />
+                    element={<BuyerPageFramework component={<Buyer />} />} />
                 <Route
                     path="/houses" //Path for it to be added too
                     element={<BuyerPageFramework component={<Houses />} />} />
