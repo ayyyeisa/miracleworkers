@@ -8,8 +8,8 @@ const customerLandingPage = () => {
     return (
         <div className ="customerLandingPage"> 
             <div class="header">
-                <img className="bigPhoto" src = "https://img1.rapidleaks.com/2019/12/Things-To-Do-In-Venice.jpg" width="1000" height="300"/>
-                <div class="bottomleft">Architectural Trends in 2026</div>
+                <img className="bigPhoto" src = "https://img1.rapidleaks.com/2019/12/Things-To-Do-In-Venice.jpg"/>
+                <div class="bigPhotoText">Architectural Trends in 2026</div>
             </div>
         </div>
 
