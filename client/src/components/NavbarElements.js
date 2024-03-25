@@ -20,7 +20,6 @@ export const smallNav = styled.smallnav`
     background: #ffc700;
     height: 12px;
     top: 0;
-    right 20;
     display: flex;
     justify-content: space-between;
     padding: 0.2rem calc((100vw - 1000px) / 2);
