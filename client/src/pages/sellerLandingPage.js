@@ -33,9 +33,9 @@ const SellerLandingPage = () => {
 
                 <div className="product_list">
                     <ul>
-                    <li><Product name = "Dwelling" image = "https://i.imgur.com/avsowwj.jpeg"/></li>
-                    <li><Product name = "Castle" image = "https://i.imgur.com/jbNN0xv.png"/></li>
-                    <li><Product name = "The Pit" image = "https://i.imgur.com/PHarVvi.png"/></li>
+                    <li><Product name = "Office Building" image = "https://th.bing.com/th/id/OIP.MLmGvVQCJ4ETKI6lFEkPYQHaE7?rs=1&pid=ImgDetMain"/></li>
+                    <li><Product name = "Hospital" image = "https://th.bing.com/th/id/R.72fbbb2693580c414dc51e8b4a7ba08f?rik=Ygqs6%2bkyWcle5A&riu=http%3a%2f%2fwww10.aeccafe.com%2fblogs%2farch-showcase%2ffiles%2f2011%2f10%2fCAN0649_N22_letter.jpg&ehk=eQFt4WNZCVtGNyMZd2RF14%2f0xr%2f5UutjE6q5H0NS9Gs%3d&risl=&pid=ImgRaw&r=0"/></li>
+                    <li><Product name = "School" image = "https://upload.wikimedia.org/wikipedia/commons/2/24/State_Normal_School_Building.jpg"/></li>
                     </ul>
                 </div>
 
@@ -51,9 +51,9 @@ const SellerLandingPage = () => {
 
             <div className="product_list">
                     <ul>
-                    <li><Product name = "Residence" image = "https://i.imgur.com/dHPXoMK.png"/></li>
-                    <li><Product name = "Home" image = "https://i.imgur.com/jWyKJci.jpeg"/></li>
-                    <li><Product name = "Hut" image = "https://i.imgur.com/fUfyj5j.jpeg"/></li>
+                    <li><Product name = "Ranch-Style" image = "https://i.imgur.com/zOuYHxy.jpeg"/></li>
+                    <li><Product name = "Farmhouse" image = "https://i.imgur.com/jimZy9d.jpeg"/></li>
+                    <li><Product name = "Cottage" image = "https://i.imgur.com/b495bNJ.jpeg"/></li>
                     </ul>
                 </div>
             </div>
