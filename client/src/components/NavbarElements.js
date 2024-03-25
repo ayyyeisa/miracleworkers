@@ -16,10 +16,38 @@ export const Nav = styled.nav`
     z-index: 12;
 `;
 
+export const smallNav = styled.nav`
+    background: #ffc700;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem calc((100vw - 1000px) / 2);
+    z-index: 12;
+`;
+
 export const NavLink = styled(Link)`
     color: #000000;
     display: flex;
     align-items: center;
+    font-weight: bold;
+    font: "Times New Roman";
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    &.active {
+        color: #4d4dff;
+    }
+`;
+
+export const SmallNavLink = styled(Link)`
+color: #000000;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font: "Times New Roman";
+    font-size: 15px;
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
@@ -49,6 +77,18 @@ export const NavMenu = styled.div`
     margin-right: -24px;
     /* Second Nav */
     /* margin-right: 24px; */
+    /* Third Nav */
+    /* width: 100vw;
+white-space: nowrap; */
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+`;
+
+export const SmallNavMenu = styled.div`
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
     /* Third Nav */
     /* width: 100vw;
 white-space: nowrap; */
