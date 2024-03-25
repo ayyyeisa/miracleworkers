@@ -5,7 +5,7 @@
 
 import React from "react";
 
-import { BuyerNavBar, SellerNavBar, SmallerSellerNavBar } from "../components/Navbar";
+import { BuyerNavBar, SellerNavBar} from "../components/Navbar";
 
 // This page component includes the navbar components.
 // Takes in the main page component as a paramater.
@@ -25,7 +25,6 @@ export const BuyerPageFramework = ({ component }) => {
 export const SellerPageFramework = ({ component }) => {
     return (
         <div className="app-container">
-            <SmallerSellerNavBar />
             <SellerNavBar />
             <div className="content-container">
                 <div className="main-content">
