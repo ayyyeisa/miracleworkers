@@ -16,7 +16,7 @@ export const Nav = styled.nav`
     z-index: 12;
 `;
 
-export const smallNav = styled.smallnav`
+export const smallNav = styled.nav`
     background: #ffc700;
     height: 12px;
     top: 0;
@@ -59,6 +59,18 @@ export const NavMenu = styled.div`
     margin-right: -24px;
     /* Second Nav */
     /* margin-right: 24px; */
+    /* Third Nav */
+    /* width: 100vw;
+white-space: nowrap; */
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+`;
+
+export const SmallNavMenu = styled.div`
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
     /* Third Nav */
     /* width: 100vw;
 white-space: nowrap; */
