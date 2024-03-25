@@ -10,21 +10,24 @@
   position: relative;
 }
 
-.bottomleft {
+.bigPhotoText {
   position: absolute;
   bottom: 32px;
   left: 40px;
   font-size: 32px;
   font-weight: bold;
-}
+  padding: 10px;
+} 
 
 .bigPhoto {
-  width: 50%;
+  float: left;
+  width: 1800px;
+  height: 300px;
   opacity: 0.5;
   z-index: -1;
-  max-height: 200px;
-  border-radius: 30px;
-  padding: 15px;
+  max-height: 300px;
+  border-radius: 50px;
+  padding: 30px;
 }
 
 .smallPhoto {
