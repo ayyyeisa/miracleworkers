@@ -16,6 +16,17 @@ export const Nav = styled.nav`
     z-index: 12;
 `;
 
+export const smallNav = styled.smallnav`
+    background: #ffc700;
+    height: 12px;
+    top: 0;
+    right 20;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem calc((100vw - 1000px) / 2);
+    z-index: 12;
+`;
+
 export const NavLink = styled(Link)`
     color: #000000;
     display: flex;
