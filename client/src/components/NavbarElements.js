@@ -18,8 +18,7 @@ export const Nav = styled.nav`
 
 export const smallNav = styled.nav`
     background: #ffc700;
-    height: 12px;
-    top: 0;
+    height: 85px;
     display: flex;
     justify-content: space-between;
     padding: 0.2rem calc((100vw - 1000px) / 2);
@@ -30,7 +29,26 @@ export const NavLink = styled(Link)`
     color: #000000;
     display: flex;
     align-items: center;
-    text-decoration: underline;
+    font-weight: bold;
+    font: "Times New Roman";
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    &.active {
+        color: #4d4dff;
+    }
+`;
+
+export const SmallNavLink = styled(Link)`
+color: #000000;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font: "Times New Roman";
+    font-size: 15px;
+    text-decoration: none;
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;

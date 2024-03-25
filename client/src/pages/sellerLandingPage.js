@@ -14,7 +14,7 @@ const SellerLandingPage = () => {
         <div className="SellerLandingPage">
 
             <div class="header">
-                <img className="spunchbob" src="https://i.imgur.com/lysIMu8.png" alt="spunchbob" width="1000" height="300"/>
+                <img className="spunchbob" src="https://i.imgur.com/hpdq0bd.jpeg" alt="spunchbob" width="400" height="300"/>
                 <div class="bottomleft">Architectural Trends in 2026</div>
             </div>
 
@@ -42,7 +42,7 @@ const SellerLandingPage = () => {
             </div>
 
             <div class="header">
-                <img className="headerimage" src="https://i.imgur.com/kG52mDd.jpeg" alt="ermm" width="1000" height="300"/>
+                <img className="headerimage" src="https://i.imgur.com/sAokhhu.jpeg" alt="headerimage" width="400" height="300"/>
                 <div class="bottomleft">Smart Home Collection</div>
             </div>
 

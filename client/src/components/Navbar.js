@@ -4,7 +4,7 @@
 /// </summary>
 
 import React from "react";
-import { Nav, NavLink, NavMenu, SmallNavMenu, smallNav } from "./NavbarElements";
+import { Nav, NavLink, NavMenu, SmallNavMenu, smallNav, SmallNavLink } from "./NavbarElements";
 
 export const BuyerNavBar = () => {
     return (
@@ -58,15 +58,15 @@ export const SmallerSellerNavBar = () => {
     return (
         <smallNav>
             <SmallNavMenu>
-                <NavLink to="/My Account" activeStyle>
+                <SmallNavLink to="/My Account" activeStyle>
                     My Account
-                </NavLink>
-                <NavLink to="/Location Editor" activeStyle>
+                </SmallNavLink>
+                <SmallNavLink to="/Location Editor" activeStyle>
                     Location Editor
-                </NavLink>
-                <NavLink to="/Message Inbox" activeStyle>
+                </SmallNavLink>
+                <SmallNavLink to="/Message Inbox" activeStyle>
                     Message Inbox
-                </NavLink>
+                </SmallNavLink>
             </SmallNavMenu>
         </smallNav>
     );
