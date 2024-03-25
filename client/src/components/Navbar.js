@@ -79,11 +79,11 @@ export const SmallerBuyerNavBar = () => {
                 <SmallNavLink to="/My Account" activeStyle>
                     My Account
                 </SmallNavLink>
+                <SmallNavLink to="/My Favorites" activeStyle>
+                    My Favorites
+                </SmallNavLink>
                 <SmallNavLink to="/My Cart" activeStyle>
                     My Cart
-                </SmallNavLink>
-                <SmallNavLink to="/Message Inbox" activeStyle>
-                    Message Inbox
                 </SmallNavLink>
             </SmallNavMenu>
         </smallNav>
