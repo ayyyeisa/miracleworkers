@@ -23,13 +23,13 @@ const SellerLandingPage = () => {
 
                 <div className="product_list">
                     <ul>
-                    <li><Product name = "House" image = "https://i.imgur.com/R6N42eD.png"/></li>
-                    <li><Product name = "Domicile" image = "https://i.imgur.com/U1EDTku.jpeg"/></li>
-                    <li><Product name = "Abode" image = "https://i.imgur.com/xRYap68.jpeg"/></li>
+                    <li><Product name = "Mansion" image = "https://i.imgur.com/R6N42eD.png"/></li>
+                    <li><Product name = "Modern" image = "https://i.imgur.com/KZfGbM0.png"/></li>
+                    <li><Product name = "Humble Living" image = "https://i.imgur.com/dXiGF8b.png"/></li>
                     </ul>
                 </div>
 
-                <SuggestedContent category = "Good for Your Company"/>
+                <SuggestedContent category = "Good Fit for Your Company"/>
 
                 <div className="product_list">
                     <ul>
