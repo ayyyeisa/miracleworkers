@@ -5,7 +5,7 @@
 
 import React from "react";
 
-import { BuyerNavBar, SellerNavBar } from "../components/Navbar";
+import { BuyerNavBar, SellerNavBar} from "../components/Navbar";
 
 // This page component includes the navbar components.
 // Takes in the main page component as a paramater.
