@@ -4,7 +4,7 @@
 /// </summary>
 
 import React from "react";
-import { Nav, NavLink, NavMenu, SmallNavMenu, smallNav, SmallNavLink } from "./NavbarElements";
+import { Nav, NavLink, NavMenu, SmallNavMenu, SmallNav, SmallNavLink } from "./NavbarElements";
 
 export const BuyerNavBar = () => {
     return (
