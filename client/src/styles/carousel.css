@@ -2,33 +2,34 @@
 
 .carousel {
     height: 300px;
-    width: 1700px;
+    width: 100%;
     overflow: hidden;
     position: relative;
     display: block;
-    margin: 0px;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 30px;
   }
 
   .carouselCard {
-    display: block;
+    display: inline-block;
+    position: relative;
     align-items: center;
   }
 
   .carouselCard > img {
-    width: 1700px;
+    width: 1600px;
     height: 300px;
     opacity: 0.5;
-    border-radius: 40px;
-    padding: 0px;
+    z-index: -1;
+    border-radius: 20px;
   }
 
   .carouselText {
-    position: relative;
-    top: 80px;
-    left: 60px;
-    font-size: 32px;
+    position: absolute;
+    z-index: 1;
+    bottom: 30px;
+    left: 10px;
+    font-size: 40px;
     font-weight: bold;
     padding: 10px;
   }
@@ -39,8 +40,6 @@
     display: flex;
     position: absolute;
     left: 0;
-    justify-content: center;
-    align-items: center;
     height: 300px;
     gap: 10px;
     animation: slide 20s linear infinite;
@@ -51,6 +50,6 @@
       left: 0;
     }
     100% {
-      left: -100%;
+      left: -450%;
     }
   }
