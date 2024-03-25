@@ -12,6 +12,7 @@ function AutoplayCarousel() {
             <CarouselItem
               imgUrl={cardDetails[detailKey].imgUrl}
               imgTitle={cardDetails[detailKey].title}
+              carouselText={cardDetails[detailKey].carouselText}
             ></CarouselItem>
           );
         })}
@@ -20,6 +21,7 @@ function AutoplayCarousel() {
             <CarouselItem
               imgUrl={cardDetails[detailKey].imgUrl}
               imgTitle={cardDetails[detailKey].title}
+              carouselText={cardDetails[detailKey].carouselText}
             ></CarouselItem>
           );
         })}
