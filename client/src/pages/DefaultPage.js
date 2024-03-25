@@ -20,6 +20,7 @@ const Page = () => {
             <NavLink to="./buyer" activeStyle>
                 buyer
             </NavLink>
+            
         </div>
     );
 };
