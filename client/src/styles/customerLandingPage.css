@@ -6,9 +6,9 @@
 .customerLandingPage {
   display: block;
   justify-content: center;
-  margin-left: 35px;
+  margin-left: 75px;
   margin-right: 75px;
-  max-width: 100%;
+  max-width: 1800px;
 }
 
 .header{
