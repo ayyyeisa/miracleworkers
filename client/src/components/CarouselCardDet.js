@@ -1,3 +1,7 @@
+/* Author: Isa Luluquisin
+// Description: Script contains the photos and captions used for the carousel
+*/
+
 export const cardDetails = {
   0: {
       imgUrl: "https://picsum.photos/id/237/1600/300",
@@ -23,4 +27,4 @@ export const cardDetails = {
       title: "Text 4",
       carouselText: "3D Printing Architectural Trends in 2026"
   }
-}
+};

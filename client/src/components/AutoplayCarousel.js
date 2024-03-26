@@ -1,5 +1,10 @@
+/// <summary>
+/// Authors: Isa Luluquisin
+/// Description: Script contains the function for the infinitely scrolling carousel
+/// </summary>
+
 import React from "react";
-import "../styles/Carousel.css";
+import "../styles/carousel.css";
 import { cardDetails } from "./CarouselCardDet";
 import CarouselItem from "./CarouselItem";
 

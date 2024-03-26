@@ -1,3 +1,8 @@
+/* Author: Isa Luluquisin
+// Description: Script contains formatting for the non-navbar and non-carousel components
+// of the customerLandingPage.js
+*/
+
 .customerLandingPage {
   display: block;
   justify-content: center;

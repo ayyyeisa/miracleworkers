@@ -4,12 +4,15 @@
 /// </summary>
 
 import React from "react";
-import { Nav, NavLink, NavMenu, SmallNavMenu, smallNav, SmallNavLink } from "./NavbarElements";
+import { Nav, NavLink, NavMenu, SmallNavMenu, SmallNavLink } from "./NavbarElements";
 
 export const BuyerNavBar = () => {
     return (
         <Nav>
             <NavMenu>
+                <NavLink to="/customerLandingPage" activeStyle>
+                    HOME
+                </NavLink>
                 <NavLink to="/houses" activeStyle>
                     Houses
                 </NavLink>
@@ -76,13 +79,13 @@ export const SmallerBuyerNavBar = () => {
     return (
         <smallNav>
             <SmallNavMenu>
-                <SmallNavLink to="/My Account" activeStyle>
+                <SmallNavLink to="/dummyPages/myAccount" activeStyle>
                     My Account
                 </SmallNavLink>
-                <SmallNavLink to="/My Favorites" activeStyle>
+                <SmallNavLink to="/dummyPages/myFavorites" activeStyle>
                     My Favorites
                 </SmallNavLink>
-                <SmallNavLink to="/My Cart" activeStyle>
+                <SmallNavLink to="/dummyPages/myCart" activeStyle>
                     My Cart
                 </SmallNavLink>
             </SmallNavMenu>

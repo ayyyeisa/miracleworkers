@@ -1,6 +1,11 @@
+/*Author: Isa Luluquisin, Kait
+// Description: This script contains the content of the customer landing screen. It is formatted as
+// shown in the sample document given at the beginning of the project.
+*/
+
 import React from "react";
 import "../styles/customerLandingPage.css";
-import "../styles/Carousel.css";
+import "../styles/carousel.css";
 import AutoplayCarousel from "../components/AutoplayCarousel";
 import Product from "../components/Product";
 import SuggestedContent from "../components/SuggestedContent"
@@ -29,7 +34,7 @@ const customerLandingPage = () => {
 
                 <div className="product_list">
                     <ul>
-                    <li><Product name = "Green House" image = "https://i.etsystatic.com/21692876/r/il/503d7d/2734910657/il_570xN.2734910657_53ld.jpg"/></li>
+                    <li><Product name = "Green House" link = "https://thumbor.forbes.com" image = "https://i.etsystatic.com/21692876/r/il/503d7d/2734910657/il_570xN.2734910657_53ld.jpg" /></li>
                     <li><Product name = "Garden Log Cabin" image = "https://media.glampinghub.com/CACHE/images/accommodations/riverfront-log-home-cabin-1493371670946/7e8853f03105db72ce48cc20205ef360.jpg"/></li>
                     <li><Product name = "Vintage Villa" image = "https://www.victoriabuzz.com/wp-content/uploads/2017/04/Tulip-House-on-Beach-Drive.jpg"/></li>
                     </ul>
