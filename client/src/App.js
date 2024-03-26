@@ -1,5 +1,5 @@
 /// <summary>
-/// Authors: Jason Shull, Parker Libby
+/// Authors: Jason Shull, Parker Libby, Isa Luluquisin
 /// Description: This sript handles all of the links that the files need to navigate to
 /// </summary>
 
@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages
 import Seller from "./pages/sellerLandingPage";
+import Buyer from "./pages/customerLandingPage";
 import { BuyerPageFramework, SellerPageFramework } from "./pages/Pageframework";
 import Page from "./pages/DefaultPage";
 import Structures from "./pages/structures";
@@ -22,6 +23,9 @@ import Design from "./pages/design";
 import Construct from "./pages/construct";
 import Community from "./pages/community";
 import Support from "./pages/support";
+import MyAccount from "./pages/dummyPages/myAccount";
+import MyFavorites from "./pages/dummyPages/myFavorites";
+import MyCart from "./pages/dummyPages/myAccount";
 
 function App() {
 
@@ -36,7 +40,10 @@ function App() {
                     element={<SellerPageFramework component={<Seller />} />} />
                 <Route
                     exact path="/buyer" //Path for it to be added too
-                    element={<BuyerPageFramework component={<Houses />} />} />
+                    element={<BuyerPageFramework component={<Buyer />} />} />
+                <Route
+                    path="/customerLandingPage" //Path for it to be added too
+                    element={<BuyerPageFramework component={<Buyer />} />} />
                 <Route
                     path="/houses" //Path for it to be added too
                     element={<BuyerPageFramework component={<Houses />} />} />
@@ -67,6 +74,15 @@ function App() {
                 <Route
                     path="/support" //Path for it to be added too
                     element={<SellerPageFramework component={<Support />} />} />
+                <Route
+                    path="/dummyPages/myAccount" //Path for it to be added too
+                    element={<BuyerPageFramework component={<MyAccount />} />} />
+                <Route
+                    path="/dummyPages/myFavorites" //Path for it to be added too
+                    element={<BuyerPageFramework component={<MyFavorites />} />} />
+                <Route
+                    path="/dummyPages/myCart" //Path for it to be added too
+                    element={<BuyerPageFramework component={<MyCart />} />} />
             </Routes>
         </Router>
     );
