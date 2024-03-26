@@ -23,7 +23,7 @@ const customerLandingPage = () => {
 
                 <div className="product_list">
                     <ul>
-                    <li><Product name = "Lantern Home" image = "https://homesnapshots.com/wp-content/uploads/sites/2/2019/08/67424.jpg"/></li>
+                    <li><Product name = "Lantern Home" image = "https://homesnapshots.com/wp-content/uploads/sites/2/2019/08/67424.jpg" link = "/dummyPages/sampleProduct" /> </li>
                     <li><Product name = "Sphere House" image = "https://robbreport.com/wp-content/uploads/2023/02/Credit-Jilbert-Daniel-8-1.jpg?w=1000"/></li>
                     <li><Product name = "Japanese Style Cabin" image = "https://aspiremetro.com/wp-content/uploads/2022/07/haiku.jpeg"/></li>
                     </ul>
@@ -34,7 +34,7 @@ const customerLandingPage = () => {
 
                 <div className="product_list">
                     <ul>
-                    <li><Product name = "Green House" link = "https://thumbor.forbes.com" image = "https://i.etsystatic.com/21692876/r/il/503d7d/2734910657/il_570xN.2734910657_53ld.jpg" /></li>
+                    <li><Product name = "Green House" image = "https://i.etsystatic.com/21692876/r/il/503d7d/2734910657/il_570xN.2734910657_53ld.jpg" /></li>
                     <li><Product name = "Garden Log Cabin" image = "https://media.glampinghub.com/CACHE/images/accommodations/riverfront-log-home-cabin-1493371670946/7e8853f03105db72ce48cc20205ef360.jpg"/></li>
                     <li><Product name = "Vintage Villa" image = "https://www.victoriabuzz.com/wp-content/uploads/2017/04/Tulip-House-on-Beach-Drive.jpg"/></li>
                     </ul>
