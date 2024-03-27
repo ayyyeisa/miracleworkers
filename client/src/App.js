@@ -12,7 +12,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Seller from "./pages/sellerLandingPage";
 import Buyer from "./pages/customerLandingPage";
 import { BuyerPageFramework, SellerPageFramework } from "./pages/Pageframework";
-import Page from "./pages/DefaultPage";
+//import Page from "./pages/DefaultPage";
 import Structures from "./pages/structures";
 import Brands from "./pages/brands";
 import Company from "./pages/company";
@@ -33,16 +33,10 @@ function App() {
         <Router>
             <Routes>
                 <Route
-                    exact path="/" //Path for it to be added too
-                    element={<Page />} />
-                <Route
                     exact path="/seller" //Path for it to be added too
                     element={<SellerPageFramework component={<Seller />} />} />
                 <Route
-                    exact path="/buyer" //Path for it to be added too
-                    element={<BuyerPageFramework component={<Buyer />} />} />
-                <Route
-                    path="/customerLandingPage" //Path for it to be added too
+                    exact path="/" //Path for it to be added too
                     element={<BuyerPageFramework component={<Buyer />} />} />
                 <Route
                     path="/houses" //Path for it to be added too
@@ -58,7 +52,7 @@ function App() {
                     element={<BuyerPageFramework component={<Resources />} />} />
                 <Route
                     path="/company" //Path for it to be added too
-                    element={<BuyerPageFramework component={<Company />} />} />    
+                    element={<BuyerPageFramework component={<Company />} />} />
                 <Route
                     path="/discover" //Path for it to be added too
                     element={<SellerPageFramework component={<Discover />} />} />
@@ -89,3 +83,10 @@ function App() {
 }
 
 export default App;
+
+
+/*
+                <Route
+                    //path="/" //Path for it to be added too
+                    //element={<BuyerPageFramework component={<Buyer />} />} />
+*/

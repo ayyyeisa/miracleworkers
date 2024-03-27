@@ -6,11 +6,12 @@
 import React from "react";
 import { Nav, NavLink, NavMenu, SmallNavMenu, SmallNavLink } from "./NavbarElements";
 
+
 export const BuyerNavBar = () => {
     return (
         <Nav>
             <NavMenu>
-                <NavLink to="/customerLandingPage" activeStyle>
+                <NavLink to="/" activeStyle>
                     HOME
                 </NavLink>
                 <NavLink to="/houses" activeStyle>
@@ -37,19 +38,19 @@ export const SellerNavBar = () => {
     return (
         <Nav>
             <NavMenu>
-                <NavLink to="/Discover" activeStyle>
+                <NavLink to="/discover" activeStyle>
                     Discover
                 </NavLink>
-                <NavLink to="/Design" activeStyle>
+                <NavLink to="/design" activeStyle>
                     Design
                 </NavLink>
-                <NavLink to="/Construct" activeStyle>
+                <NavLink to="/construct" activeStyle>
                     Construct
                 </NavLink>
-                <NavLink to="/Community" activeStyle>
+                <NavLink to="/community" activeStyle>
                     Community
                 </NavLink>
-                <NavLink to="/Support" activeStyle>
+                <NavLink to="/support" activeStyle>
                     Support
                 </NavLink>
             </NavMenu>
@@ -61,13 +62,13 @@ export const SmallerSellerNavBar = () => {
     return (
         <smallNav>
             <SmallNavMenu>
-                <SmallNavLink to="/My Account" activeStyle>
+                <SmallNavLink to="/my-account" activeStyle>
                     My Account
                 </SmallNavLink>
-                <SmallNavLink to="/Location Editor" activeStyle>
+                <SmallNavLink to="/location-editor" activeStyle>
                     Location Editor
                 </SmallNavLink>
-                <SmallNavLink to="/Message Inbox" activeStyle>
+                <SmallNavLink to="/message-inbox" activeStyle>
                     Message Inbox
                 </SmallNavLink>
             </SmallNavMenu>
@@ -79,13 +80,13 @@ export const SmallerBuyerNavBar = () => {
     return (
         <smallNav>
             <SmallNavMenu>
-                <SmallNavLink to="/dummyPages/myAccount" activeStyle>
+                <SmallNavLink to="/dummyPages/myaccount" activeStyle>
                     My Account
                 </SmallNavLink>
-                <SmallNavLink to="/dummyPages/myFavorites" activeStyle>
+                <SmallNavLink to="/dummyPages/myfavorites" activeStyle>
                     My Favorites
                 </SmallNavLink>
-                <SmallNavLink to="/dummyPages/myCart" activeStyle>
+                <SmallNavLink to="/dummyPages/mycart" activeStyle>
                     My Cart
                 </SmallNavLink>
             </SmallNavMenu>
