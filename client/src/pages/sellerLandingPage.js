@@ -7,15 +7,17 @@ import React from "react";
 import "../styles/SellerLandingPage.css";
 import Product from "../components/Product";
 import SuggestedContent from "../components/SuggestedContent";
+import AutoplayCarousel from "../components/AutoplayCarousel";
+import "../styles/customerLandingPage.css";
+import "../styles/carousel.css";
 
  //Format for seller landing page
 const SellerLandingPage = () => {
     return (
         <div className="SellerLandingPage">
 
-            <div class="header">
-                <img className="spunchbob" src="https://i.imgur.com/hpdq0bd.jpeg" alt="spunchbob" width="400" height="300"/>
-                <div class="bottomleft">Architectural Trends in 2026</div>
+            <div className="carousel">
+                <AutoplayCarousel />
             </div>
 
             <div className="suggested_content">
