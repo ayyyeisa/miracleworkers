@@ -12,7 +12,7 @@ export const BuyerNavBar = () => {
         <Nav>
             <NavMenu>
                 <NavLink to="/" activeStyle>
-                    HOME
+                    <img src={require("../images/House.png")} alt="House"></img>
                 </NavLink>
                 <NavLink to="/houses" activeStyle>
                     Houses
@@ -87,7 +87,7 @@ export const SmallerBuyerNavBar = () => {
                     My Favorites
                 </SmallNavLink>
                 <SmallNavLink to="/dummyPages/mycart" activeStyle>
-                    My Cart
+                    <img src={require("../images/Cart.png")} alt="Cart" height="30"></img>
                 </SmallNavLink>
             </SmallNavMenu>
         </smallNav>
