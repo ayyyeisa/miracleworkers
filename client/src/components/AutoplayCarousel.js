@@ -4,7 +4,7 @@
 /// </summary>
 
 import React from "react";
-import "../styles/carousel.css";
+import "../assets/carousel.css";
 import { cardDetails } from "./CarouselCardDet";
 import CarouselItem from "./CarouselItem";
 

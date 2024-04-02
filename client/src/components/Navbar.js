@@ -1,6 +1,6 @@
 /// <summary>
 /// Authors: Jason Shull, Parker Libby
-/// Description: This sript handles all of the links that the files need to navigate to for the navbar
+/// Description: This script handles all of the links that the files need to navigate to for the navbar
 /// </summary>
 
 import React from "react";
@@ -12,7 +12,7 @@ export const DefaultNavBar = () => {
         <Nav>
             <NavMenu>
                 <NavLink to="/" activeStyle>
-                    <img src={require("../images/House.png")} alt="House"></img>
+                    <img src={require("../assets/House.png")} alt="House"></img>
                 </NavLink>
                 <NavLink to="/houses" activeStyle>
                     Houses
@@ -32,7 +32,7 @@ export const DefaultNavBar = () => {
             </NavMenu>
             <SearchContainer>
                 <SearchInput type="text" placeholder="Search..." />
-                <SearchButton><img src={require("../images/SearchIcon.png")} alt="Search" width="30" height="30" /></SearchButton>
+                <SearchButton><img src={require("../assets/SearchIcon.png")} alt="Search" width="30" height="30" /></SearchButton>
             </SearchContainer>
         </Nav>
     );
@@ -43,7 +43,7 @@ export const BuyerNavBar = () => {
         <Nav>
             <NavMenu>
                 <NavLink to="/login/buyer" activeStyle>
-                    <img src={require("../images/House.png")} alt="House"></img>
+                    <img src={require("../assets/House.png")} alt="House"></img>
                 </NavLink>
                 <NavLink to="/houses" activeStyle>
                     Houses
@@ -63,7 +63,7 @@ export const BuyerNavBar = () => {
             </NavMenu>
             <SearchContainer>
                 <SearchInput type="text" placeholder="Search..." />
-                <SearchButton><img src={require("../images/SearchIcon.png")} alt="Search" width="30" height="30" /></SearchButton>
+                <SearchButton><img src={require("../assets/SearchIcon.png")} alt="Search" width="30" height="30" /></SearchButton>
             </SearchContainer>
         </Nav>
     );
@@ -74,7 +74,7 @@ export const SellerNavBar = () => {
         <Nav>
             <NavMenu>
                 <NavLink to="/login/seller" activeStyle>
-                    <img src={require("../images/House.png")} alt="House"></img>
+                    <img src={require("../assets/House.png")} alt="House"></img>
                 </NavLink>
                 <NavLink to="/discover" activeStyle>
                     Discover
@@ -94,7 +94,7 @@ export const SellerNavBar = () => {
             </NavMenu>
             <SearchContainer>
                 <SearchInput type="text" placeholder="Search..." />
-                <SearchButton><img src={require("../images/SearchIcon.png")} alt="Search" width="30" height="30" /></SearchButton>
+                <SearchButton><img src={require("../assets/SearchIcon.png")} alt="Search" width="30" height="30" /></SearchButton>
             </SearchContainer>
         </Nav>
     );
@@ -147,7 +147,7 @@ export const SmallerBuyerNavBar = () => {
                     My Favorites
                 </SmallNavLink>
                 <SmallNavLink to="/dummyPages/mycart" activeStyle>
-                    <img src={require("../images/Cart.png")} alt="Cart" height="30"></img>
+                    <img src={require("../assets/Cart.png")} alt="Cart" height="30"></img>
                 </SmallNavLink>
             </SmallNavMenu>
         </smallNav>

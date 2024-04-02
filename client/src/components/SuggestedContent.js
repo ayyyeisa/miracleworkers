@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/SuggestedContent.css";
+import "../assets/SuggestedContent.css";
 import "./Product";
 
 //the intent is to have relavant product info WITHIN this function. however, i can't figure it out

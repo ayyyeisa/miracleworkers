@@ -6,7 +6,7 @@
 import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
-import SearchIcon from "../images/SearchIcon.png";
+import SearchIcon from "../assets/SearchIcon.png";
 
 export const Nav = styled.nav`
     background: #ffc700;

@@ -4,8 +4,8 @@
 */
 
 import React from "react";
-import "../styles/customerLandingPage.css";
-import "../styles/carousel.css";
+import "../assets/customerLandingPage.css";
+import "../assets/carousel.css";
 import AutoplayCarousel from "../components/AutoplayCarousel";
 import Product from "../components/Product";
 import Collections from "../components/Collections";

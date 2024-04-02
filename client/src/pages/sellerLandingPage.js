@@ -1,16 +1,16 @@
 /// <summary>
-/// Authors: Jason Shull
+/// Authors: Corinne Scheidecker
 /// Description: Script contains how the Seller webpage will be formated
 /// </summary>
 
 import React from "react";
-import "../styles/SellerLandingPage.css";
+import "../assets/SellerLandingPage.css";
 import Product from "../components/Product";
 import Collections from "../components/Collections";
 import SuggestedContent from "../components/SuggestedContent";
 import AutoplayCarousel from "../components/AutoplayCarousel";
-import "../styles/customerLandingPage.css";
-import "../styles/carousel.css";
+import "../assets/customerLandingPage.css";
+import "../assets/carousel.css";
 
  //Format for seller landing page
 const SellerLandingPage = () => {

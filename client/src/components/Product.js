@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Product.css";
+import "../assets/Product.css";
 import {Link} from 'react-router-dom'
 
 const Product = ({name, image, link}) => {

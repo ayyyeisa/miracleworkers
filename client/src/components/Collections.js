@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/collections.css";
+import "../assets/collections.css";
 import {Link} from 'react-router-dom'
 
 const Collections = ({name, image, link}) => {

@@ -5,7 +5,7 @@
 
 import React from "react";
 
-import "../styles/customerLandingPage.css";
+import "../assets/customerLandingPage.css";
 import Product from "../components/Product";
 
 //Format for customer landing page
