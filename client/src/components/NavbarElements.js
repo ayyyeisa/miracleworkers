@@ -17,14 +17,11 @@ export const Nav = styled.nav`
     z-index: 12;
 `;
 
-export const smallNav = styled.nav`
+export const SmallNav = styled.nav`
     background: #ffc700;
-    height: 85px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem calc((100vw - 1000px) / 2);
-    z-index: 12;
-    text-align: right;
+    height: 20px;
+    justify-content: space-between;    
+    padding: 10px;
 `;
 
 export const NavLink = styled(Link)`
@@ -88,11 +85,8 @@ white-space: nowrap; */
 `;
 
 export const SmallNavMenu = styled.div`
-background: #ffc700;
-
     display: flex;
     align-items: center;
-    text-align: right;
     /*margin-left: 80%;*/
     /* Third30 Nav */
     /* width: 100vw;
