@@ -4,14 +4,15 @@
 /// </summary>
 
 import React from "react";
-import { Nav, NavLink, NavMenu, SmallNavMenu, SmallNavLink } from "./NavbarElements";
+import { Nav, NavLink, NavMenu, SmallNavMenu, SmallNavLink, SearchContainer, SearchInput, SearchButton } from "./NavbarElements";
+
 
 export const BuyerNavBar = () => {
     return (
         <Nav>
             <NavMenu>
-                <NavLink to="/customerLandingPage" activeStyle>
-                    HOME
+                <NavLink to="/" activeStyle>
+                    <img src={require("../images/House.png")} alt="House"></img>
                 </NavLink>
                 <NavLink to="/houses" activeStyle>
                     Houses
@@ -29,6 +30,10 @@ export const BuyerNavBar = () => {
                     Company
                 </NavLink>
             </NavMenu>
+            <SearchContainer>
+                <SearchInput type="text" placeholder="Search..." />
+                <SearchButton><img src={require("../images/SearchIcon.png")} alt="Search" width="30" height="30" /></SearchButton>
+            </SearchContainer>
         </Nav>
     );
 };
@@ -37,22 +42,26 @@ export const SellerNavBar = () => {
     return (
         <Nav>
             <NavMenu>
-                <NavLink to="/Discover" activeStyle>
+                <NavLink to="/discover" activeStyle>
                     Discover
                 </NavLink>
-                <NavLink to="/Design" activeStyle>
+                <NavLink to="/design" activeStyle>
                     Design
                 </NavLink>
-                <NavLink to="/Construct" activeStyle>
+                <NavLink to="/construct" activeStyle>
                     Construct
                 </NavLink>
-                <NavLink to="/Community" activeStyle>
+                <NavLink to="/community" activeStyle>
                     Community
                 </NavLink>
-                <NavLink to="/Support" activeStyle>
+                <NavLink to="/support" activeStyle>
                     Support
                 </NavLink>
             </NavMenu>
+            <SearchContainer>
+                <SearchInput type="text" placeholder="Search..." />
+                <SearchButton><img src={require("../images/SearchIcon.png")} alt="Search" width="30" height="30" /></SearchButton>
+            </SearchContainer>
         </Nav>
     );
 };
@@ -61,13 +70,13 @@ export const SmallerSellerNavBar = () => {
     return (
         <smallNav>
             <SmallNavMenu>
-                <SmallNavLink to="/My Account" activeStyle>
+                <SmallNavLink to="/my-account" activeStyle>
                     My Account
                 </SmallNavLink>
-                <SmallNavLink to="/Location Editor" activeStyle>
+                <SmallNavLink to="/location-editor" activeStyle>
                     Location Editor
                 </SmallNavLink>
-                <SmallNavLink to="/Message Inbox" activeStyle>
+                <SmallNavLink to="/message-inbox" activeStyle>
                     Message Inbox
                 </SmallNavLink>
             </SmallNavMenu>
@@ -79,14 +88,14 @@ export const SmallerBuyerNavBar = () => {
     return (
         <smallNav>
             <SmallNavMenu>
-                <SmallNavLink to="/dummyPages/myAccount" activeStyle>
+                <SmallNavLink to="/dummyPages/myaccount" activeStyle>
                     My Account
                 </SmallNavLink>
-                <SmallNavLink to="/dummyPages/myFavorites" activeStyle>
+                <SmallNavLink to="/dummyPages/myfavorites" activeStyle>
                     My Favorites
                 </SmallNavLink>
-                <SmallNavLink to="/dummyPages/myCart" activeStyle>
-                    My Cart
+                <SmallNavLink to="/dummyPages/mycart" activeStyle>
+                    <img src={require("../images/Cart.png")} alt="Cart" height="30"></img>
                 </SmallNavLink>
             </SmallNavMenu>
         </smallNav>

@@ -24,10 +24,7 @@ const Houses = () => {
         Just Added
     </h1>
     <div className="just_added">
-       <Product
-       name = "joshhutcherson"
-       image = "https://cdn.vox-cdn.com/thumbor/PzidjXAPw5kMOXygTMEuhb634MM=/11x17:1898x1056/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/72921759/vlcsnap_2023_12_01_10h37m31s394.0.jpg"
-       />
+    
 
     <h1>
         Smart Home Collection
