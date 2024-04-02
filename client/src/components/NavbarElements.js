@@ -88,9 +88,12 @@ white-space: nowrap; */
 `;
 
 export const SmallNavMenu = styled.div`
+background: #ffc700;
+
     display: flex;
     align-items: center;
-    margin-left: 1550px;
+    text-align: right;
+    /*margin-left: 80%;*/
     /* Third30 Nav */
     /* width: 100vw;
 white-space: nowrap; */
