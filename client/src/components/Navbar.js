@@ -4,10 +4,10 @@
 /// </summary>
 
 import React from "react";
-import { Nav, NavLink, NavMenu, SmallNavMenu, SmallNavLink } from "./NavbarElements";
+import { Nav, NavLink, NavMenu, SmallNavMenu, SmallNavLink, SearchContainer, SearchInput, SearchButton } from "./NavbarElements";
 
 
-export const BuyerNavBar = () => {
+export const DefaultNavBar = () => {
     return (
         <Nav>
             <NavMenu>
@@ -30,6 +30,41 @@ export const BuyerNavBar = () => {
                     Company
                 </NavLink>
             </NavMenu>
+            <SearchContainer>
+                <SearchInput type="text" placeholder="Search..." />
+                <SearchButton><img src={require("../images/SearchIcon.png")} alt="Search" width="30" height="30" /></SearchButton>
+            </SearchContainer>
+        </Nav>
+    );
+};
+
+export const BuyerNavBar = () => {
+    return (
+        <Nav>
+            <NavMenu>
+                <NavLink to="/login/buyer" activeStyle>
+                    <img src={require("../images/House.png")} alt="House"></img>
+                </NavLink>
+                <NavLink to="/houses" activeStyle>
+                    Houses
+                </NavLink>
+                <NavLink to="/structures" activeStyle>
+                    Structures
+                </NavLink>
+                <NavLink to="/brands" activeStyle>
+                    Brands
+                </NavLink>
+                <NavLink to="/resources" activeStyle>
+                    Resources
+                </NavLink>
+                <NavLink to="/company" activeStyle>
+                    Company
+                </NavLink>
+            </NavMenu>
+            <SearchContainer>
+                <SearchInput type="text" placeholder="Search..." />
+                <SearchButton><img src={require("../images/SearchIcon.png")} alt="Search" width="30" height="30" /></SearchButton>
+            </SearchContainer>
         </Nav>
     );
 };
@@ -38,6 +73,9 @@ export const SellerNavBar = () => {
     return (
         <Nav>
             <NavMenu>
+                <NavLink to="/login/seller" activeStyle>
+                    <img src={require("../images/House.png")} alt="House"></img>
+                </NavLink>
                 <NavLink to="/discover" activeStyle>
                     Discover
                 </NavLink>
@@ -54,7 +92,29 @@ export const SellerNavBar = () => {
                     Support
                 </NavLink>
             </NavMenu>
+            <SearchContainer>
+                <SearchInput type="text" placeholder="Search..." />
+                <SearchButton><img src={require("../images/SearchIcon.png")} alt="Search" width="30" height="30" /></SearchButton>
+            </SearchContainer>
         </Nav>
+    );
+};
+
+export const SmallerDefaultNavBar = () => {
+    return (
+        <smallNav>
+            <SmallNavMenu>
+                <SmallNavLink to="/login" activeStyle>
+                    Login
+                </SmallNavLink>
+                <SmallNavLink to="/location-editor" activeStyle>
+                    Location Editor
+                </SmallNavLink>
+                <SmallNavLink to="/message-inbox" activeStyle>
+                    Message Inbox
+                </SmallNavLink>
+            </SmallNavMenu>
+        </smallNav>
     );
 };
 

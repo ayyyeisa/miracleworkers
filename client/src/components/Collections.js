@@ -1,18 +1,18 @@
 import React from "react";
-import "../styles/Product.css";
+import "../styles/collections.css";
 import {Link} from 'react-router-dom'
 
-const Product = ({name, image, link}) => {
+const Collections = ({name, image, link}) => {
 //make this whole thing a button/link?
     return(
         <div className="header">
         <Link to= {link}>
-            <img className="productPhoto" src={image} alt="" />
+            <img className= "collectionsPhoto" src={image} alt="" />
         </Link>
-        <div className="productTitle">
+        <div className="collectionsText">
                 <p>{name}</p>
             </div> 
         </div>
     );
 }
-export default Product;
+export default Collections;

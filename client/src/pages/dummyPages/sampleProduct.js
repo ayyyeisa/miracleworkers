@@ -15,5 +15,5 @@ const SampleProduct = () => {
         </div>
     );
 };
- 
+
 export default SampleProduct;

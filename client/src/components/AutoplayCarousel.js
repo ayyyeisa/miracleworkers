@@ -18,6 +18,7 @@ function AutoplayCarousel() {
               imgUrl={cardDetails[detailKey].imgUrl}
               imgTitle={cardDetails[detailKey].title}
               carouselText={cardDetails[detailKey].carouselText}
+              productLink={cardDetails[detailKey].productLink}
             ></CarouselItem>
           );
         })}
@@ -27,6 +28,7 @@ function AutoplayCarousel() {
               imgUrl={cardDetails[detailKey].imgUrl}
               imgTitle={cardDetails[detailKey].title}
               carouselText={cardDetails[detailKey].carouselText}
+              productLink={cardDetails[detailKey].productLink}
             ></CarouselItem>
           );
         })}
@@ -36,6 +38,7 @@ function AutoplayCarousel() {
               imgUrl={cardDetails[detailKey].imgUrl}
               imgTitle={cardDetails[detailKey].title}
               carouselText={cardDetails[detailKey].carouselText}
+              productLink={cardDetails[detailKey].productLink}
             ></CarouselItem>
           );
         })}
@@ -45,6 +48,7 @@ function AutoplayCarousel() {
               imgUrl={cardDetails[detailKey].imgUrl}
               imgTitle={cardDetails[detailKey].title}
               carouselText={cardDetails[detailKey].carouselText}
+              productLink={cardDetails[detailKey].productLink}
             ></CarouselItem>
           );
         })}

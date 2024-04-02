@@ -4,11 +4,14 @@
 ///</summary> 
 
 import React from "react";
+import {Link} from 'react-router-dom'
 
-export default function CarouselItem({ imgUrl, imgTitle, carouselText }) {
+export default function CarouselItem({ imgUrl, imgTitle, carouselText, productLink }) {
   return (
     <div className="carouselCard">
-      <img src={imgUrl} alt={imgTitle}></img>
+      <Link to= {productLink}>
+        <img className="carouselImage" src={imgUrl} alt={imgTitle} />
+      </Link>
       <div className="carouselText">
         {carouselText}
       </div>

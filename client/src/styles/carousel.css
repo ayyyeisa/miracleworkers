@@ -18,12 +18,12 @@
     align-items: center;
   }
 
-  .carouselCard > img {
+  .carouselImage {
     width: 1600px;
     height: 300px;
     opacity: 0.5;
     z-index: -1;
-    border-radius: 20px;
+    border-radius: 30px;
   }
 
   .carouselText {
