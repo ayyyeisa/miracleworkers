@@ -6,6 +6,7 @@
 import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
+import SearchIcon from "../images/SearchIcon.png";
 
 export const Nav = styled.nav`
     background: #ffc700;
@@ -87,10 +88,37 @@ white-space: nowrap; */
 `;
 
 export const SmallNavMenu = styled.div`
+    display: flex;
+    align-items: center;
+    margin-left: 1550px;
+    /* Third30 Nav */
+    /* width: 100vw;
+white-space: nowrap; */
     @media screen and (max-width: 768px) {
         display: none;
     }
     width: 100vw;
-    margin-right: 40px;
-    text-align: right;
+`;
+
+export const SearchButton = styled.span`
+    display: inline-block;
+    width: 30px; 
+    height: 30px; 
+    background-image: url(${SearchIcon}); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    cursor: pointer;
+`;
+
+export const SearchInput = styled.input`
+    padding: 0.5rem; 
+    margin-right: -1px; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+`;
+
+export const SearchContainer = styled.div`
+    display: flex;
+    align-items: center;
 `;
