@@ -4,7 +4,7 @@
 /// </summary>
 
 import React from "react";
-import { Nav, NavLink, NavMenu, SmallNavMenu, SmallNavLink } from "./NavbarElements";
+import { Nav, NavLink, NavMenu, SmallNavMenu, SmallNavLink, SearchContainer, SearchInput, SearchButton } from "./NavbarElements";
 
 
 export const BuyerNavBar = () => {
@@ -30,6 +30,10 @@ export const BuyerNavBar = () => {
                     Company
                 </NavLink>
             </NavMenu>
+            <SearchContainer>
+                <SearchInput type="text" placeholder="Search..." />
+                <SearchButton><img src={require("../images/SearchIcon.png")} alt="Search" width="30" height="30" /></SearchButton>
+            </SearchContainer>
         </Nav>
     );
 };
@@ -54,6 +58,10 @@ export const SellerNavBar = () => {
                     Support
                 </NavLink>
             </NavMenu>
+            <SearchContainer>
+                <SearchInput type="text" placeholder="Search..." />
+                <SearchButton><img src={require("../images/SearchIcon.png")} alt="Search" width="30" height="30" /></SearchButton>
+            </SearchContainer>
         </Nav>
     );
 };
