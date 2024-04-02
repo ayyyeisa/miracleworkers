@@ -88,7 +88,7 @@ white-space: nowrap; */
 export const SmallNavMenu = styled.div`
     display: flex;
     align-items: center;
-    margin-right: 24px;
+    margin-left: 1500px;
     /* Third Nav */
     /* width: 100vw;
 white-space: nowrap; */
