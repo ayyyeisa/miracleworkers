@@ -25,8 +25,9 @@ import Community from "./pages/community";
 import Support from "./pages/support";
 import MyAccount from "./pages/dummyPages/myAccount";
 import MyFavorites from "./pages/dummyPages/myFavorites";
-import MyCart from "./pages/dummyPages/myAccount";
+import MyCart from "./pages/dummyPages/myCart";
 import Login from "./pages/login";
+import SampleProduct from "./pages/dummyPages/sampleProduct";
 
 function App() {
 
@@ -79,11 +80,14 @@ function App() {
                     path="/dummyPages/myAccount" //Path for it to be added too
                     element={<BuyerPageFramework component={<MyAccount />} />} />
                 <Route
-                    path="/dummyPages/myfavorites" //Path for it to be added too
+                    path="/dummyPages/myFavorites" //Path for it to be added too
                     element={<BuyerPageFramework component={<MyFavorites />} />} />
                 <Route
-                    path="/dummyPages/mycart" //Path for it to be added too
+                    path="/dummyPages/myCart" //Path for it to be added too
                     element={<BuyerPageFramework component={<MyCart />} />} />
+                <Route
+                    path="/dummyPages/sampleProduct" //Path for it to be added too
+                    element={<DefaultPageFramework component={<SampleProduct />} />} />
             </Routes>
         </Router>
     );
