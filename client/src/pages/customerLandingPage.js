@@ -23,9 +23,9 @@ const customerLandingPage = () => {
 
                 <div className="product_list">
                     <ul>
-                    <li><Product link = "/dummyPages/sampleProduct" name = "Lantern Home" image = "https://picsum.photos/id/230/400/250" /> </li>
-                    <li><Product link = "/dummyPages/sampleProduct" name = "Sphere House" image = "https://picsum.photos/id/237/400/250"/> </li>
-                    <li><Product link = "/dummyPages/sampleProduct" name = "Japanese Style Cabin" image = "https://picsum.photos/id/231/400/250"/> </li>
+                    <li><Product link = "/sampleProduct" name = "Lantern Home" image = "https://picsum.photos/id/230/400/250" /> </li>
+                    <li><Product link = "/sampleProduct" name = "Sphere House" image = "https://picsum.photos/id/237/400/250"/> </li>
+                    <li><Product link = "/sampleProduct" name = "Japanese Style Cabin" image = "https://picsum.photos/id/231/400/250"/> </li>
                     </ul>
                 </div>
 
@@ -34,9 +34,9 @@ const customerLandingPage = () => {
 
                 <div className="product_list">
                     <ul>
-                    <li><Product link = "/dummyPages/sampleProduct" name = "Green House" image = "https://picsum.photos/id/232/400/250" /></li>
-                    <li><Product link = "/dummyPages/sampleProduct" name = "Garden Log Cabin" image = "https://picsum.photos/id/233/400/250"/></li>
-                    <li><Product link = "/dummyPages/sampleProduct" name = "Vintage Villa" image = "https://picsum.photos/id/234/400/250"/></li>
+                    <li><Product link = "/sampleProduct" name = "Green House" image = "https://picsum.photos/id/232/400/250" /></li>
+                    <li><Product link = "/sampleProduct" name = "Garden Log Cabin" image = "https://picsum.photos/id/233/400/250"/></li>
+                    <li><Product link = "/sampleProduct" name = "Vintage Villa" image = "https://picsum.photos/id/234/400/250"/></li>
                     </ul>
                 </div>
               </div>
@@ -51,9 +51,9 @@ const customerLandingPage = () => {
 
                 <div className="product_list">
                     <ul>
-                    <li><Product link = "/dummyPages/sampleProduct" name = "Loft Home" image = "https://picsum.photos/id/235/400/250"/></li>
-                    <li><Product link = "/dummyPages/sampleProduct" name = "Country House" image = "https://picsum.photos/id/236/400/250"/></li>
-                    <li><Product link = "/dummyPages/sampleProduct" name = "Vacation House" image = "https://picsum.photos/id/238/400/250"/></li>
+                    <li><Product link = "/sampleProduct" name = "Loft Home" image = "https://picsum.photos/id/235/400/250"/></li>
+                    <li><Product link = "/sampleProduct" name = "Country House" image = "https://picsum.photos/id/236/400/250"/></li>
+                    <li><Product link = "/sampleProduct" name = "Vacation House" image = "https://picsum.photos/id/238/400/250"/></li>
                     </ul>
                 </div>
               </div>

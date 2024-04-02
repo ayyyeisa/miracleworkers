@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Pages
 import Seller from "./pages/sellerLandingPage";
 import Buyer from "./pages/customerLandingPage";
-import { BuyerPageFramework, SellerPageFramework } from "./pages/Pageframework";
+import { BuyerPageFramework, SellerPageFramework, DefaultPageFramework } from "./pages/Pageframework";
 //import Page from "./pages/DefaultPage";
 import Structures from "./pages/structures";
 import Brands from "./pages/brands";
@@ -26,6 +26,7 @@ import Support from "./pages/support";
 import MyAccount from "./pages/dummyPages/myAccount";
 import MyFavorites from "./pages/dummyPages/myFavorites";
 import MyCart from "./pages/dummyPages/myAccount";
+import Login from "./pages/login";
 
 function App() {
 
@@ -33,11 +34,17 @@ function App() {
         <Router>
             <Routes>
                 <Route
-                    exact path="/seller" //Path for it to be added too
+                    exact path="/login/seller" //Path for it to be added too
                     element={<SellerPageFramework component={<Seller />} />} />
                 <Route
-                    exact path="/" //Path for it to be added too
+                    exact path="/login/buyer" //Path for it to be added too
                     element={<BuyerPageFramework component={<Buyer />} />} />
+                <Route
+                    exact path="/" //Path for it to be added too
+                    element={<DefaultPageFramework component={<Buyer />} />} />
+                <Route
+                    path="/login" //Path for it to be added too
+                    element={<DefaultPageFramework component={<Login />} />} />
                 <Route
                     path="/houses" //Path for it to be added too
                     element={<BuyerPageFramework component={<Houses />} />} />
@@ -72,10 +79,10 @@ function App() {
                     path="/dummyPages/myAccount" //Path for it to be added too
                     element={<BuyerPageFramework component={<MyAccount />} />} />
                 <Route
-                    path="/dummyPages/myFavorites" //Path for it to be added too
+                    path="/dummyPages/myfavorites" //Path for it to be added too
                     element={<BuyerPageFramework component={<MyFavorites />} />} />
                 <Route
-                    path="/dummyPages/myCart" //Path for it to be added too
+                    path="/dummyPages/mycart" //Path for it to be added too
                     element={<BuyerPageFramework component={<MyCart />} />} />
             </Routes>
         </Router>
