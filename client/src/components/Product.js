@@ -5,11 +5,11 @@ import {Link} from 'react-router-dom'
 const Product = ({name, image, link}) => {
 //make this whole thing a button/link?
     return(
-        <div className="product">
+        <div className="header">
         <Link to= {link}>
-            <img src={image} alt="" />
+            <img className="productPhoto" src={image} alt="" />
         </Link>
-        <div className="product_info">
+        <div className="productTitle">
                 <p>{name}</p>
             </div> 
         </div>

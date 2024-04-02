@@ -10,7 +10,7 @@ export default function CarouselItem({ imgUrl, imgTitle, carouselText, productLi
   return (
     <div className="carouselCard">
       <Link to= {productLink}>
-        <img src={imgUrl} alt={imgTitle}></img>
+        <img className="carouselImage" src={imgUrl} alt={imgTitle} />
       </Link>
       <div className="carouselText">
         {carouselText}

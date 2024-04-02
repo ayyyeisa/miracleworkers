@@ -4,7 +4,7 @@
 
 export const cardDetails = {
   0: {
-      imgUrl: "https://picsum.photos/id/237/1600/300",
+      imgUrl: "https://picsum.photos/id/239/1600/300",
       title: "Text 1",
       carouselText: "3D Printing Architectural Trends in 2026",
       productLink: "/dummyPages/sampleProduct"
@@ -23,11 +23,10 @@ export const cardDetails = {
       carouselText: "3D Printing Architectural Trends in 2026",
       productLink: "/dummyPages/sampleProduct"
   },
-
   3: {
-      imgUrl: "https://picsum.photos/id/240/1600/300",
-      title: "Text 4",
-      carouselText: "3D Printing Architectural Trends in 2026",
-      productLink: "/dummyPages/sampleProduct"
-  }
+    imgUrl: "https://picsum.photos/id/239/1600/300",
+    title: "Text 4",
+    carouselText: "3D Printing Architectural Trends in 2026",
+    productLink: "/dummyPages/sampleProduct"
+}
 };
