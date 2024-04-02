@@ -5,7 +5,7 @@
 
 import React from "react";
  
-const MyFavorites = () => {
+const myFavorites = () => {
     return (
         <div>
             <h1>
@@ -15,4 +15,4 @@ const MyFavorites = () => {
     );
 };
  
-export default MyFavorites;
+export default myFavorites;

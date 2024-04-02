@@ -4,7 +4,7 @@
 
 import React from "react";
  
-const MyAccount = () => {
+const myAccount = () => {
     return (
         <div>
             <h1>
@@ -14,4 +14,4 @@ const MyAccount = () => {
     );
 };
  
-export default MyAccount;
+export default myAccount;

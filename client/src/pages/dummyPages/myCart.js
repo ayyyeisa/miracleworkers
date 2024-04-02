@@ -5,7 +5,7 @@
 
 import React from "react";
  
-const MyCart = () => {
+const myCart = () => {
     return (
         <div>
             <h1>
@@ -15,4 +15,4 @@ const MyCart = () => {
     );
 };
  
-export default MyCart;
+export default myCart;

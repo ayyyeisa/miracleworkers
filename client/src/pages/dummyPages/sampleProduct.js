@@ -6,7 +6,7 @@
 
 import React from "react";
  
-const SampleProduct = () => {
+export const sampleProduct = () => {
     return (
         <div>
             <h1>
@@ -15,5 +15,3 @@ const SampleProduct = () => {
         </div>
     );
 };
- 
-export default SampleProduct;
