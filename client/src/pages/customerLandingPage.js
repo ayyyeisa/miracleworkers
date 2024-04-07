@@ -25,19 +25,19 @@ const customerLandingPage = () => {
                 <div className="product_list">
                     <ul>
                     <li><Product 
-                        link = "/dummyPages/sampleProduct" 
+                        link = "/product" 
                         title = "Lantern Home" 
                         image = "https://homesnapshots.com/wp-content/uploads/sites/2/2019/08/67424.jpg"
                         designer = "designer" 
                         price = "4000" /></li>
                     <li><Product 
-                        link = "/dummyPages/sampleProduct" 
+                        link = "/product" 
                         title = "Sphere House" 
                         image = "https://robbreport.com/wp-content/uploads/2023/02/Credit-Jilbert-Daniel-8-1.jpg?w=1000"
                         designer = "designer" 
                         price = "4000" /> </li>
                     <li><Product 
-                        link = "/dummyPages/sampleProduct" 
+                        link = "/product" 
                         title = "Japanese Style Cabin" 
                         image = "https://aspiremetro.com/wp-content/uploads/2022/07/haiku.jpeg"
                         designer = "designer" 
@@ -51,19 +51,19 @@ const customerLandingPage = () => {
                 <div className="product_list">
                     <ul>
                     <li><Product 
-                        link = "/dummyPages/sampleProduct" 
+                        link = "/product" 
                         title = "Green House" 
                         image = "https://i.etsystatic.com/21692876/r/il/503d7d/2734910657/il_570xN.2734910657_53ld.jpg" 
                         designer = "designer" 
                         price = "4000"/></li>
                     <li><Product 
-                        link = "/dummyPages/sampleProduct" 
+                        link = "/product" 
                         title = "Garden Log Cabin" 
                         image = "https://media.glampinghub.com/CACHE/images/accommodations/riverfront-log-home-cabin-1493371670946/7e8853f03105db72ce48cc20205ef360.jpg"
                         designer = "designer" 
                         price = "4000"/></li>
                     <li><Product 
-                        link = "/dummyPages/sampleProduct" 
+                        link = "/product" 
                         title = "Vintage Villa" 
                         image = "https://www.victoriabuzz.com/wp-content/uploads/2017/04/Tulip-House-on-Beach-Drive.jpg"
                         designer = "designer" 
@@ -73,7 +73,7 @@ const customerLandingPage = () => {
               </div>
 
             <Collections 
-                link = "/dummyPages/sampleProduct" 
+                link = "/product" 
                 title = "Smart Home Collection" 
                 image = "https://images.surferseo.art/17bb9c9b-4894-43ed-97a0-ed9389bb657d.png"
                 designer = "designer" 

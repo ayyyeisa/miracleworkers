@@ -1,30 +1,40 @@
 import React from "react";
-import "./styles/Product.css";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 
-const Product = ({ id, title, image, price, link, rating }) => {
- 
-  return (
-    <div className="product">
-      <div className="product__info">
-        <p>{title}</p>
-        <p className="product__price">
-          <small>$</small>
-          <strong>{price}</strong>
-        </p>
-        <div className="product__rating">
-          {Array(rating)
-            .fill()
-            .map((_, i) => (
-              <p>🌟</p>
-            ))}
-        </div>
-      </div>
 
-        <img onclick={link} src={image} alt="" />
+const Product = () => {
+     const [structureInfo, setStructureInfo] = useState('');
 
-      <button>Add to Basket</button>
-    </div>
-  );
-}
+     let { productId } = useParams();
+
+     const requestOptions = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ pageID: { productId }.productId })
+     };
+
+     fetch("http://localhost:5000/product", requestOptions).then((response) => response.json()).then((data) => {
+          setStructureInfo(data);
+     }).catch((error) => {
+          console.error("Error fetching data:", error);
+          setStructureInfo(error.message);
+     });
+
+     return (
+          <div>
+               <div>
+                    <h1>{{ productId }.productId}</h1>
+                    <h1>{structureInfo.structure_type}</h1>
+                    <p>{structureInfo.price}</p>
+               </div>
+               <div>
+                    <img src={structureInfo.image_main}></img>
+               </div>
+               <img src={structureInfo.sub_image}></img>
+          </div>
+
+     );
+};
 
 export default Product;
