@@ -3,7 +3,7 @@
 /// Description: This sript handles all of the links that the files need to navigate to
 /// </summary>
 
-import React from "react";
+import React, { useState, useEffect }  from "react";
 
 // Components
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -26,13 +26,15 @@ import Community from "./pages/community";
 import Support from "./pages/support";
 import MyAccount from "./pages/dummyPages/myAccount";
 import MyFavorites from "./pages/dummyPages/myFavorites";
-import MyCart from "./pages/dummyPages/myCart";
+import MyCart from "./pages/myCart";
 import Login from "./pages/login";
 import SampleProduct from "./pages/dummyPages/sampleProduct";
+import './assets/App.css';
 
 function App() {
-
+    
     return (
+        <div>
         <Router>
             <Routes>
                 <Route
@@ -87,13 +89,15 @@ function App() {
                     path="/dummyPages/myFavorites" //Path for it to be added too
                     element={<BuyerPageFramework component={<MyFavorites />} />} />
                 <Route
-                    path="/dummyPages/myCart" //Path for it to be added too
+                    path="/myCart" //Path for it to be added to
                     element={<BuyerPageFramework component={<MyCart />} />} />
                 <Route
                     path="/dummyPages/sampleProduct" //Path for it to be added too
                     element={<DefaultPageFramework component={<SampleProduct />} />} />
             </Routes>
         </Router>
+
+        </div>
     );
 }
 
