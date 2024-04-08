@@ -128,7 +128,7 @@ export const SmallerSellerNavBar = () => {
                 <SmallNavLink to="/dummyPages/locationeditor" activeStyle>
                     Location Editor
                 </SmallNavLink>
-                <SmallNavLink to="/dummyPages/messagesinbox" activeStyle>
+                <SmallNavLink to="/messagesinbox" activeStyle>
                     Message Inbox
                 </SmallNavLink>
             </SmallNavMenu>
