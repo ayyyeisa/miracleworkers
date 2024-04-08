@@ -110,7 +110,7 @@ export const SmallerDefaultNavBar = () => {
                 <SmallNavLink to="/location-editor" activeStyle>
                     Location Editor
                 </SmallNavLink>
-                <SmallNavLink to="/message-inbox" activeStyle>
+                <SmallNavLink to="/dummyPages/message-inbox" activeStyle>
                     Message Inbox
                 </SmallNavLink>
             </SmallNavMenu>
@@ -128,7 +128,7 @@ export const SmallerSellerNavBar = () => {
                 <SmallNavLink to="/dummyPages/locationeditor" activeStyle>
                     Location Editor
                 </SmallNavLink>
-                <SmallNavLink to="/messagesinbox" activeStyle>
+                <SmallNavLink to="/dummyPages/messagesinbox" activeStyle>
                     Message Inbox
                 </SmallNavLink>
             </SmallNavMenu>
@@ -149,7 +149,7 @@ export const SmallerBuyerNavBar = () => {
                 <SmallNavLink to="/dummyPages/mycart" activeStyle>
                     <img src={require("../images/Cart.png")} alt="Cart" height="30"></img>
                 </SmallNavLink>
-                <SmallNavLink to="/message-inbox" activeStyle>
+                <SmallNavLink to="/dummyPages/message-inbox" activeStyle>
                     Message Inbox
                 </SmallNavLink>
             </SmallNavMenu>
