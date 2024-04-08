@@ -3,7 +3,7 @@
 /// Description: This sript handles all of the links that the files need to navigate to
 /// </summary>
 
-import React, { useState, useEffect }  from "react";
+import React, { useState, useEffect } from "react";
 
 // Components
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -29,73 +29,84 @@ import MyFavorites from "./pages/dummyPages/myFavorites";
 import MyCart from "./pages/myCart";
 import Login from "./pages/login";
 import SampleProduct from "./pages/dummyPages/sampleProduct";
+import { CreateAccountForm, CreateBuyerForm, CreateSellerForm, LoginForm, LoginScreenBase, Template } from './Login';
+import './index.css';
 import './assets/App.css';
 
 function App() {
-    
+
     return (
         <div>
-        <Router>
-            <Routes>
-                <Route
-                    exact path="/login/seller" //Path for it to be added too
-                    element={<SellerPageFramework component={<Seller />} />} />
-                <Route
-                    exact path="/login/designer" //Path for it to be added too
-                    element={<SellerPageFramework component={<Designer />} />} />
-                <Route
-                    exact path="/login/buyer" //Path for it to be added too
-                    element={<BuyerPageFramework component={<Buyer />} />} />
-                <Route
-                    exact path="/" //Path for it to be added too
-                    element={<DefaultPageFramework component={<Buyer />} />} />
-                <Route
-                    path="/login" //Path for it to be added too
-                    element={<DefaultPageFramework component={<Login />} />} />
-                <Route
-                    path="/houses" //Path for it to be added too
-                    element={<BuyerPageFramework component={<Houses />} />} />
-                <Route
-                    path="/structures" //Path for it to be added too
-                    element={<BuyerPageFramework component={<Structures />} />} />
-                <Route
-                    path="/brands" //Path for it to be added too
-                    element={<BuyerPageFramework component={<Brands />} />} />
-                <Route
-                    path="/resources" //Path for it to be added too
-                    element={<BuyerPageFramework component={<Resources />} />} />
-                <Route
-                    path="/company" //Path for it to be added too
-                    element={<BuyerPageFramework component={<Company />} />} />
-                <Route
-                    path="/discover" //Path for it to be added too
-                    element={<SellerPageFramework component={<Discover />} />} />
-                <Route
-                    path="/design" //Path for it to be added too
-                    element={<SellerPageFramework component={<Design />} />} />
-                <Route
-                    path="/construct" //Path for it to be added too
-                    element={<SellerPageFramework component={<Construct />} />} />
-                <Route
-                    path="/community" //Path for it to be added too
-                    element={<SellerPageFramework component={<Community />} />} />
-                <Route
-                    path="/support" //Path for it to be added too
-                    element={<SellerPageFramework component={<Support />} />} />
-                <Route
-                    path="/dummyPages/myAccount" //Path for it to be added too
-                    element={<BuyerPageFramework component={<MyAccount />} />} />
-                <Route
-                    path="/dummyPages/myFavorites" //Path for it to be added too
-                    element={<BuyerPageFramework component={<MyFavorites />} />} />
-                <Route
-                    path="/myCart" //Path for it to be added to
-                    element={<BuyerPageFramework component={<MyCart />} />} />
-                <Route
-                    path="/dummyPages/sampleProduct" //Path for it to be added too
-                    element={<DefaultPageFramework component={<SampleProduct />} />} />
-            </Routes>
-        </Router>
+            <Router>
+                <Routes>
+                    <Route
+                        exact path="/login/seller" //Path for it to be added too
+                        element={<SellerPageFramework component={<Seller />} />} />
+                    <Route
+                        exact path="/login/designer" //Path for it to be added too
+                        element={<SellerPageFramework component={<Designer />} />} />
+                    <Route
+                        exact path="/login/buyer" //Path for it to be added too
+                        element={<BuyerPageFramework component={<Buyer />} />} />
+                    <Route
+                        exact path="/" //Path for it to be added too
+                        element={<DefaultPageFramework component={<Buyer />} />} />
+                    <Route
+                        path="/houses" //Path for it to be added too
+                        element={<BuyerPageFramework component={<Houses />} />} />
+                    <Route
+                        path="/structures" //Path for it to be added too
+                        element={<BuyerPageFramework component={<Structures />} />} />
+                    <Route
+                        path="/brands" //Path for it to be added too
+                        element={<BuyerPageFramework component={<Brands />} />} />
+                    <Route
+                        path="/resources" //Path for it to be added too
+                        element={<BuyerPageFramework component={<Resources />} />} />
+                    <Route
+                        path="/company" //Path for it to be added too
+                        element={<BuyerPageFramework component={<Company />} />} />
+                    <Route
+                        path="/discover" //Path for it to be added too
+                        element={<SellerPageFramework component={<Discover />} />} />
+                    <Route
+                        path="/design" //Path for it to be added too
+                        element={<SellerPageFramework component={<Design />} />} />
+                    <Route
+                        path="/construct" //Path for it to be added too
+                        element={<SellerPageFramework component={<Construct />} />} />
+                    <Route
+                        path="/community" //Path for it to be added too
+                        element={<SellerPageFramework component={<Community />} />} />
+                    <Route
+                        path="/support" //Path for it to be added too
+                        element={<SellerPageFramework component={<Support />} />} />
+                    <Route
+                        path="/dummyPages/myAccount" //Path for it to be added too
+                        element={<BuyerPageFramework component={<MyAccount />} />} />
+                    <Route
+                        path="/dummyPages/myFavorites" //Path for it to be added too
+                        element={<BuyerPageFramework component={<MyFavorites />} />} />
+                    <Route
+                        path="/myCart" //Path for it to be added to
+                        element={<BuyerPageFramework component={<MyCart />} />} />
+                    <Route
+                        path="/dummyPages/sampleProduct" //Path for it to be added too
+                        element={<DefaultPageFramework component={<SampleProduct />} />} />
+                    <Route
+                        exact path="/login"
+                        element={<Template children={<LoginScreenBase children={<LoginForm />} />} />} />
+                    <Route
+                        exact path="/SignUp"
+                        element={<Template children={<LoginScreenBase children={<CreateAccountForm />} />} />} />
+                    <Route
+                        exact path="/SignUp/SellerSignUp"
+                        element={<Template children={<LoginScreenBase children={<CreateSellerForm />} />} />} />
+                    <Route
+                        exact path="/SignUp/BuyerSignUp"
+                        element={<Template children={<LoginScreenBase children={<CreateBuyerForm />} />} />} />
+                </Routes>
+            </Router>
 
         </div>
     );
@@ -105,6 +116,10 @@ export default App;
 
 
 /*
+<Route
+                    path="/login" //Path for it to be added too
+                    element={<DefaultPageFramework component={<Login />} />} />
+
                 <Route
                     //path="/" //Path for it to be added too
                     //element={<BuyerPageFramework component={<Buyer />} />} />
