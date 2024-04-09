@@ -54,6 +54,15 @@ function App() {
                 <Route
                     path="/login" //Path for it to be added too
                     element={<DefaultPageFramework component={<Login />} />} />
+                <Route
+                    exact path="/SignUp"
+                    element={<Template children={<LoginScreenBase children={<CreateAccountForm />} />} />} />
+                <Route
+                    exact path="/SignUp/SellerSignUp"
+                    element={<Template children={<LoginScreenBase children={<CreateSellerForm />} />} />} />
+                <Route
+                        exact path="/SignUp/BuyerSignUp"
+                        element={<Template children={<LoginScreenBase children={<CreateBuyerForm />} />} />} />
 
                 {/** ROUTING FOR DEFAULT NAVBAR AND SMALLNAVBAR */}
                 <Route
