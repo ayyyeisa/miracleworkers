@@ -27,7 +27,6 @@ import Support from "./pages/support";
 import MyAccount from "./pages/dummyPages/myAccount";
 import MyFavorites from "./pages/dummyPages/myFavorites";
 import MyCart from "./pages/myCart";
-import Login from "./pages/login";
 import './assets/App.css';
 import { CreateAccountForm, CreateBuyerForm, CreateSellerForm, LoginForm, LoginScreenBase, Template } from './Login';
 import './index.css';
@@ -54,8 +53,8 @@ function App() {
 
                 {/** ROUTING FOR LOGIN */}
                 <Route
-                    path="/login" //Path for it to be added too
-                    element={<DefaultPageFramework component={<Login />} />} />
+                    exact path="/login"
+                    element={<Template children={<LoginScreenBase children={<LoginForm />} />} />} />
                 <Route
                     exact path="/SignUp"
                     element={<Template children={<LoginScreenBase children={<CreateAccountForm />} />} />} />
@@ -63,8 +62,8 @@ function App() {
                     exact path="/SignUp/SellerSignUp"
                     element={<Template children={<LoginScreenBase children={<CreateSellerForm />} />} />} />
                 <Route
-                        exact path="/SignUp/BuyerSignUp"
-                        element={<Template children={<LoginScreenBase children={<CreateBuyerForm />} />} />} />
+                    exact path="/SignUp/BuyerSignUp"
+                    element={<Template children={<LoginScreenBase children={<CreateBuyerForm />} />} />} />
 
                 {/** ROUTING FOR DEFAULT NAVBAR AND SMALLNAVBAR */}
                 <Route
