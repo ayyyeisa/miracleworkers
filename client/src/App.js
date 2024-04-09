@@ -29,6 +29,8 @@ import MyFavorites from "./pages/dummyPages/myFavorites";
 import MyCart from "./pages/myCart";
 import Login from "./pages/login";
 import './assets/App.css';
+import { CreateAccountForm, CreateBuyerForm, CreateSellerForm, LoginForm, LoginScreenBase, Template } from './Login';
+import './index.css';
 
 function App() {
     
