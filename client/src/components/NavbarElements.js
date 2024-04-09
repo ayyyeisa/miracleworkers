@@ -17,11 +17,13 @@ export const Nav = styled.nav`
     z-index: 12;
 `;
 
-export const SmallNav = styled.nav`
+export const smallNav = styled.nav`
     background: #ffc700;
-    height: 20px;
-    justify-content: space-between;    
-    padding: 10px;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem calc((100vw - 1000px) / 2);
+    z-index: 12;
 `;
 
 export const NavLink = styled(Link)`
@@ -41,19 +43,19 @@ export const NavLink = styled(Link)`
 `;
 
 export const SmallNavLink = styled(Link)`
-    color: #000000;
+color: #000000;
     display: flex;
+    align-items: center;
     font-weight: bold;
     font: "Times New Roman";
     font-size: 15px;
-    text-decoration: none;  
+    text-decoration: none;
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
     &.active {
         color: #4d4dff;
     }
-    text-align: right;
 `;
 
 export const Bars = styled(FaBars)`
@@ -87,14 +89,13 @@ white-space: nowrap; */
 export const SmallNavMenu = styled.div`
     display: flex;
     align-items: center;
-    margin-left: 80%;
-    /* Third30 Nav */
+    margin-left: 1500px;
+    /* Third Nav */
     /* width: 100vw;
 white-space: nowrap; */
     @media screen and (max-width: 768px) {
         display: none;
     }
-    width: 100vw;
 `;
 
 export const SearchButton = styled.span`

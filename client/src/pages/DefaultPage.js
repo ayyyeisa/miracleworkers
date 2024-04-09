@@ -19,7 +19,8 @@ const Page = () => {
             </NavLink>
             <NavLink to="./buyer" activeStyle>
                 buyer
-            </NavLink>          
+            </NavLink>
+            
         </div>
     );
 };
