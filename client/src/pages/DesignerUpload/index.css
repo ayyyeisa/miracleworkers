@@ -1,0 +1,138 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #f3e92c;
+  --error: #e7195a;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/005/507/698/original/simple-black-and-yellow-background-with-grunge-effect-abstract-yellow-and-black-background-for-banner-poster-flyer-or-wallpaper-vector.jpg); /* Replace 'path_to_your_background_image.jpg' with the actual path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  background: #0f0303;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #e9e5e5;
+  text-decoration: none;
+}
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+
+.home-container {
+  text-align: left;
+  position: relative;
+}
+
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error {
+  border: 1px solid var(--error);
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure the container takes up the full height of the viewport */
+}
+
+.sub-container {
+  width: 400px; /* Adjust the width of the form container */
+  padding: 20px;
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 8px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: left;
+  text-align: left; /* Align text inside the container to the left */
+}
+
+.create h3 {
+  margin-top: 0;
+}
+
+.create label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.create input[type="text"],
+.create input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.create input[type="file"] {
+  margin-bottom: 16px;
+}
+
+.create button {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-right: 8px;
+  border: none;
+  background-color: #c6c6b6;
+  color: rgb(15, 13, 13);
+  cursor: pointer;
+}
+
+.create button:last-child {
+  margin-right: 0;
+}

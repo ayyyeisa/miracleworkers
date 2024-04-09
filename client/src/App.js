@@ -29,6 +29,12 @@ import MyFavorites from "./pages/dummyPages/myFavorites";
 import MyCart from "./pages/myCart";
 import Login from "./pages/login";
 import SampleProduct from "./pages/dummyPages/sampleProduct";
+import Navbar from '../DesignerUpload/Navbar';
+import Home from './DesignerUpload/Home';
+import UploadHouseModel from '../DesignerUpload/UploadHouseModel';
+import UploadStructuralModel from '../DesignerUpload/UploadStructuralModel';
+import UploadArticle from '../DesignerUpload/UploadArticle';
+import Messages from '../DesignerUpload/message';
 import './assets/App.css';
 
 function App() {

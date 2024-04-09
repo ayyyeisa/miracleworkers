@@ -20,7 +20,7 @@ const DesignerLandingPage = () => {
         <div className="SellerLandingPage">
              
             <DesignUpload 
-                designLink = "/dummyPages/designUploadPage" 
+                designLink = "/DesignerUpload/Home" 
                 photoText = "Upload Your First Design" 
                 image = ""/>
                 
