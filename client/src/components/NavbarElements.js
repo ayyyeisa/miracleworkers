@@ -19,9 +19,12 @@ export const Nav = styled.nav`
 
 export const SmallNav = styled.nav`
     background: #ffc700;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem calc((100vw - 1000px) / 2);
+    z-index: 12;
     height: 20px;
     justify-content: space-between;    
-    padding: 10px;
 `;
 
 export const NavLink = styled(Link)`
@@ -87,8 +90,8 @@ white-space: nowrap; */
 export const SmallNavMenu = styled.div`
     display: flex;
     align-items: center;
-    margin-left: 80%;
-    /* Third30 Nav */
+    justify-content: right;
+    /* Third Nav */
     /* width: 100vw;
 white-space: nowrap; */
     @media screen and (max-width: 768px) {
