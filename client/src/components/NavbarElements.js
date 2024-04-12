@@ -21,6 +21,7 @@ export const smallNav = styled.nav`
     background: #ffc700;
     height: 85px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 0.2rem calc((100vw - 1000px) / 2);
     z-index: 12;
@@ -89,7 +90,7 @@ white-space: nowrap; */
 export const SmallNavMenu = styled.div`
     display: flex;
     align-items: center;
-    margin-left: 1500px;
+    justify-content: right;
     /* Third Nav */
     /* width: 100vw;
 white-space: nowrap; */

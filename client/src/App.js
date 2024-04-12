@@ -3,8 +3,6 @@
 /// Description: This sript handles all of the links that the files need to navigate to
 /// </summary>
 
-import React, { useState, useEffect } from "react";
-
 // Components
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
