@@ -1,5 +1,8 @@
 
-  .header{
+ .container{
+  float: left;
+ }
+ .header{
     display: block;
     position: relative;
     overflow: hidden;
