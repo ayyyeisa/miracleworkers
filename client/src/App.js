@@ -3,15 +3,21 @@
 /// Description: This sript handles all of the links that the files need to navigate to
 /// </summary>
 
+import React, { useState, useEffect } from "react";
+
+import './assets/App.css';
+
 // Components
+import { Link } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from './components/Navbar';
+import axios from 'axios';
 
 // Pages
 import Seller from "./pages/sellerLandingPage";
 import Designer from "./pages/designerLandingPage";
 import Buyer from "./pages/customerLandingPage";
 import { BuyerPageFramework, SellerPageFramework, DefaultPageFramework, DesignerPageFramework } from "./pages/Pageframework";
-//import Page from "./pages/DefaultPage";
 import Structures from "./pages/structures";
 import Brands from "./pages/brands";
 import Company from "./pages/company";
@@ -25,16 +31,34 @@ import Support from "./pages/support";
 import MyAccount from "./pages/dummyPages/myAccount";
 import MyFavorites from "./pages/dummyPages/myFavorites";
 import MyCart from "./pages/myCart";
-import './assets/App.css';
+
+import EditPage from './pages/base-edit-overview.js';
+import SellerPage from './pages/SellerOverview.js';
 import { CreateAccountForm, CreateBuyerForm, CreateSellerForm, LoginForm, LoginScreenBase, Template } from './Login';
 import './index.css';
 
 function App() {
+    const [sellers, setSellers] = useState([]);
+    useEffect(()=> {
+        axios.get('http://localhost:8080/getUsers')
+        .then(sellers => setSellers(sellers.data))
+        .catch(err => console.log(err));
+    }, []);
+
+    const [sellerID, setSellerID] = useState("660322de66ad374e72b6a49e");
+
+    const [seller,  setSeller] = useState([]);
+    useEffect(()=> {
+        axios.get("http://localhost:8080/getUserByID?id=" + sellerID)
+        .then(seller => setSeller(seller.data))
+        .catch(err => console.log(err));
+    }, [sellerID]);
+
 
     return (
-        <div>
             <Router>
-                <Routes>
+            <div>
+            <Routes>
                     {/** ROUTING FOR PRESSING THE HOME BUTTONS */}
                     <Route
                         exact path="/" //Path for it to be added too
@@ -158,18 +182,39 @@ function App() {
                         element={<DesignerPageFramework component={<MyAccount />} />} />
                     {/**must also include small navbar routing like location editor and message inbox */}
 
-                </Routes>
-            </Router>
-
-        </div>
+    
+                <Route path="/edit-overview" element={<SellerPageFramework component={<EditPage />} />} />
+                <Route path="/sellerPage" element={<SellerPageFramework component={<SellerPage />} />} />
+            </Routes>
+            </div>        
+            <Link to="/edit-overview" className="btn btn-primary"><button>Edit Page</button></Link>
+            <Link to="/sellerPage" className="btn btn-primary"><button>Seller Page</button></Link>
+            {/*
+            <div className="w-100 vh-100 d-flex justify-content-center align-items-center">
+                <div className="w-50">
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {sellers.map(seller => (
+                                <tr key={seller.id}>
+                                    <td>{seller.seller_name}</td>
+                                    <td>{seller.seller_email}</td>
+                                    <td>{seller.seller_phoneNumber}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            */}
+        </Router>
     );
 }
 
 export default App;
-
-
-/*
-                <Route
-                    //path="/" //Path for it to be added too
-                    //element={<BuyerPageFramework component={<Buyer />} />} />
-*/

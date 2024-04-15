@@ -4,7 +4,7 @@
 /// </summary>
 
 import React from "react";
-import { Nav, SmallNav, NavLink, NavMenu, SmallNavMenu, SmallNavLink, SearchContainer, SearchInput, SearchButton } from "./NavbarElements";
+import { Nav, NavLink, NavMenu, SmallNavMenu, SmallNavLink, SearchContainer, SearchInput, SearchButton } from "./NavbarElements";
 
 
 export const DefaultNavBar = () => {
@@ -133,7 +133,7 @@ export const DesignerNavBar = () => {
 
 export const SmallerDefaultNavBar = () => {
     return (
-        <SmallNav>
+        <smallNav>
             <SmallNavMenu>
                 <SmallNavLink to="/login" activeStyle>
                     Login
@@ -144,14 +144,17 @@ export const SmallerDefaultNavBar = () => {
                 <SmallNavLink to="/location-editor" activeStyle>
                     Location Editor
                 </SmallNavLink>
+                <SmallNavLink to="/message-inbox" activeStyle>
+                    Message Inbox
+                </SmallNavLink>
             </SmallNavMenu>
-        </SmallNav>
+        </smallNav>
     );
-};  
+};
 
 export const SmallerSellerNavBar = () => {
     return (
-        <SmallNav>
+        <smallNav>
             <SmallNavMenu>
                 <SmallNavLink to="/dummyPages/myaccount" activeStyle>
                     My Account
@@ -163,13 +166,13 @@ export const SmallerSellerNavBar = () => {
                     Message Inbox
                 </SmallNavLink>
             </SmallNavMenu>
-        </SmallNav>
+        </smallNav>
     );
 };
 
 export const SmallerBuyerNavBar = () => {
     return (
-        <SmallNav>
+        <smallNav>
             <SmallNavMenu>
                 <SmallNavLink to="/dummyPages/myaccount" activeStyle>
                     My Account
@@ -180,10 +183,7 @@ export const SmallerBuyerNavBar = () => {
                 <SmallNavLink to="/mycart" activeStyle>
                     <img src={require("../assets/Cart.png")} alt="Cart" height="30"></img>
                 </SmallNavLink>
-                <SmallNavLink to="/dummyPages/message-inbox" activeStyle>
-                    Message Inbox
-                </SmallNavLink>
             </SmallNavMenu>
-        </SmallNav>
+        </smallNav>
     );
 };
