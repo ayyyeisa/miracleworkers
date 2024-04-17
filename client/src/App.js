@@ -39,26 +39,26 @@ import './index.css';
 
 function App() {
     const [sellers, setSellers] = useState([]);
-    useEffect(()=> {
+    useEffect(() => {
         axios.get('http://localhost:8080/getUsers')
-        .then(sellers => setSellers(sellers.data))
-        .catch(err => console.log(err));
+            .then(sellers => setSellers(sellers.data))
+            .catch(err => console.log(err));
     }, []);
 
     const [sellerID, setSellerID] = useState("660322de66ad374e72b6a49e");
 
-    const [seller,  setSeller] = useState([]);
-    useEffect(()=> {
+    const [seller, setSeller] = useState([]);
+    useEffect(() => {
         axios.get("http://localhost:8080/getUserByID?id=" + sellerID)
-        .then(seller => setSeller(seller.data))
-        .catch(err => console.log(err));
+            .then(seller => setSeller(seller.data))
+            .catch(err => console.log(err));
     }, [sellerID]);
 
 
     return (
-            <Router>
+        <Router>
             <div>
-            <Routes>
+                <Routes>
                     {/** ROUTING FOR PRESSING THE HOME BUTTONS */}
                     <Route
                         exact path="/" //Path for it to be added too
@@ -136,6 +136,11 @@ function App() {
                     <Route
                         path="/myCart" //Path for it to be added to
                         element={<BuyerPageFramework component={<MyCart />} />} />
+
+                    <Route
+                        path="/structures/:id"
+                        element={<Structures />}
+                    />
                     {/** <Route */}
                     {/**path="/messages" //Path for it to be added to */}
                     {/**element={<BuyerPageFramework component={<MessageInbox />} />} />  */}
@@ -182,11 +187,11 @@ function App() {
                         element={<DesignerPageFramework component={<MyAccount />} />} />
                     {/**must also include small navbar routing like location editor and message inbox */}
 
-    
-                <Route path="/edit-overview" element={<SellerPageFramework component={<EditPage />} />} />
-                <Route path="/sellerPage" element={<SellerPageFramework component={<SellerPage />} />} />
-            </Routes>
-            </div>        
+
+                    <Route path="/edit-overview" element={<SellerPageFramework component={<EditPage />} />} />
+                    <Route path="/sellerPage" element={<SellerPageFramework component={<SellerPage />} />} />
+                </Routes>
+            </div>
             <Link to="/edit-overview" className="btn btn-primary"><button>Edit Page</button></Link>
             <Link to="/sellerPage" className="btn btn-primary"><button>Seller Page</button></Link>
             {/*
