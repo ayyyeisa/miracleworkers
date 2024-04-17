@@ -6,7 +6,7 @@ import axios from "axios";
 import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
 import FacebookLogin from '@greatsumini/react-facebook-login';
 
-function openModal(header, message){
+function openModal(header, message) {
     const modal = document.getElementById("MyModal");
     const modalHeader = document.getElementById("ModalHeader");
     const modalMessage = document.getElementById("ModalMessage");
@@ -30,44 +30,44 @@ function closeModal() {
 
 function Modal() {
 
-    return(
+    return (
         <div id={"MyModal"} className="loginModal">
             <div>
-                <strong id={"ModalHeader"}>{}</strong>
-                <p id={"ModalMessage"}>{}</p>
-                <button onClick={()=>closeModal()}>OK</button>
+                <strong id={"ModalHeader"}>{ }</strong>
+                <p id={"ModalMessage"}>{ }</p>
+                <button onClick={() => closeModal()}>OK</button>
             </div>
         </div>
     )
 }
 
 
-function Template({children}){
+function Template({ children }) {
     //Make the login screen a reusable component for the signup 
     //and create account pages
     const nav = useNavigate()
 
     return (
         <div className="HeaderTemplate">
-            <div onClick={()=>nav("/")}>
+            <div onClick={() => nav("/")}>
 
                 <img src="https://s7d2.scene7.com/is/image/Caterpillar/CM20220222-5c3c2-280a8?fmt=png-alpha" />
             </div>
-            <div/>
+            <div />
             {children}
-            <Modal/>
+            <Modal />
         </div>
     );
 
 }
 
-function LoginScreenBase({children}){
+function LoginScreenBase({ children }) {
     const nav = useNavigate();
 
-    return(
+    return (
         <div className="SignUpPage">
             <div>
-                <img src="https://s7d2.scene7.com/is/image/Caterpillar/CM20220222-5c3c2-280a8?fmt=png-alpha" onClick={()=>nav("/")}/>
+                <img src="https://s7d2.scene7.com/is/image/Caterpillar/CM20220222-5c3c2-280a8?fmt=png-alpha" onClick={() => nav("/")} />
             </div>
             {children}
         </div>
@@ -92,56 +92,57 @@ const responseFacebook = async (response) => {
         }
     }).catch(err => openModal('Login Failed', err.response.data.reason));
 };
-function LoginForm(){
+function LoginForm() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const nav = useNavigate();
-    
+
 
     //removes google credential jwt, and provider at login screen
     localStorage.removeItem("jwt");
     localStorage.removeItem("provider");
 
-    if(localStorage.getItem("token")){
+    if (localStorage.getItem("token")) {
         const user = JSON.parse(localStorage.getItem("user"))
         //check if there is currently a session token/valid one
         const token = JSON.parse(localStorage.getItem("token"))
         if (token && token.expirationDate) {
             const expirationDate = new Date(token.expirationDate);
             const currentDate = new Date();
-            
+
             if (currentDate < expirationDate) {
                 // Token is still valid
                 nav(`/login/${user.type}`)
-            } 
+            }
         }
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:5000/auth/login', {email: email, password: password})
-        .then(result => {console.log(result)
-            if(result.data.status === "success"){
-                localStorage.setItem("token", JSON.stringify(result.data.token))
-                localStorage.setItem("user", JSON.stringify(result.data.user))
-                nav(`/login/${result.data.user.type}`)
-            }
-            else console.log(result.data.reason)
-        })
-        .catch(err => openModal("Login Failed",err.response.data.reason))
+        axios.post('http://localhost:5000/auth/login', { email: email, password: password })
+            .then(result => {
+                console.log(result)
+                if (result.data.status === "success") {
+                    localStorage.setItem("token", JSON.stringify(result.data.token))
+                    localStorage.setItem("user", JSON.stringify(result.data.user))
+                    nav(`/login/${result.data.user.type}`)
+                }
+                else console.log(result.data.reason)
+            })
+            .catch(err => openModal("Login Failed", err.response.data.reason))
     }
 
-    return(
+    return (
         <GoogleOAuthProvider clientId="868741849492-ias2jaeoigl0pls8ji5qlqrmcn2h41c5.apps.googleusercontent.com">
             <div className="LoginForm">
-                
+
                 <div className="InputFields">
                     <strong>Email</strong>
                     <input type="email" placeholder="Ex. Example@email.com" onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div className="InputFields">
                     <strong>Password</strong>
-                    <input type="password" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)}/>
+                    <input type="password" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} />
                 </div>
 
                 <strong>OR</strong>
@@ -150,23 +151,25 @@ function LoginForm(){
                         onSuccess={credentialResponse => {
                             console.log(credentialResponse);
                             axios.post('http://localhost:5000/oauth/google', {
-                                oauth:{
+                                oauth: {
                                     jwt: credentialResponse.credential
                                 }
                             })
-                            .then(login => {
-                                if (login.data.needsSignup === true){
-                                    //logged in
-                                    nav("/SignUp")
-                                    localStorage.setItem('jwt', credentialResponse.credential)
-                                    localStorage.setItem('provider', "google")
-                                }
-                                else{
-                                    //redirect user dashboard
-                                    nav(`/login/${login.data.user.type}`)
-                                }                                
-                            })
-                            .catch(err=> openModal("Login Failed",err.response.data.reason))
+                                .then(login => {
+                                    if (login.data.needsSignup === true) {
+                                        //logged in
+                                        nav("/SignUp")
+                                        localStorage.setItem('jwt', credentialResponse.credential)
+                                        localStorage.setItem('provider', "google")
+                                    }
+                                    else {
+                                        //redirect user dashboard
+                                        localStorage.setItem("token", JSON.stringify(login.data.token))
+                                        localStorage.setItem("user", JSON.stringify(login.data.user))
+                                        nav(`/login/${login.data.user.type}`)
+                                    }
+                                })
+                                .catch(err => openModal("Login Failed", err.response.data.reason))
                         }}
                         onError={err => {
                             console.log('Login Failed');
@@ -189,7 +192,7 @@ function LoginForm(){
                     />
                 </div>
                 <div>
-                    <button onClick={()=>{nav("/SignUp")}}> Create Account</button>
+                    <button onClick={() => { nav("/SignUp") }}> Create Account</button>
                     <button onClick={handleSubmit}> Login </button>
                 </div>
             </div>
@@ -197,26 +200,26 @@ function LoginForm(){
     )
 }
 
-function CreateAccountForm(){
+function CreateAccountForm() {
     const [myNav, setNav] = useState(undefined); //default is /SignUp
     const nav = useNavigate();
-    function handleNav(){
-        if(myNav === undefined){
-            openModal("Invalid Option","Please select an account type")
+    function handleNav() {
+        if (myNav === undefined) {
+            openModal("Invalid Option", "Please select an account type")
             //do nothing
-        }else if(myNav === 0){
+        } else if (myNav === 0) {
             nav("/SignUp/SellerSignUp");
-        }else if(myNav === 1){
+        } else if (myNav === 1) {
             nav("/SignUp/BuyerSignUp");
         }
     }
 
-    return(
+    return (
         <div className="CreateAccountForm">
-            
-            <button className={myNav==0 ? "LinkButton toPageButton" : "LinkButton"} onClick={()=>setNav(0)}>Create Vendor Account</button>
-            <button className={myNav==1 ? "LinkButton toPageButton" : "LinkButton"} onClick={()=>setNav(1)}>Create Customer Account</button>
-            <button className="LinkButton" onClick={()=>handleNav()}>Continue</button>
+
+            <button className={myNav == 0 ? "LinkButton toPageButton" : "LinkButton"} onClick={() => setNav(0)}>Create Vendor Account</button>
+            <button className={myNav == 1 ? "LinkButton toPageButton" : "LinkButton"} onClick={() => setNav(1)}>Create Customer Account</button>
+            <button className="LinkButton" onClick={() => handleNav()}>Continue</button>
 
         </div>
     )
@@ -248,7 +251,7 @@ const countriesList = [
     'Vatican City', 'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe'
 ];
 
-function CreateSellerForm(){
+function CreateSellerForm() {
     const OAuthsuccess = localStorage.getItem("jwt") !== null;
     const [firstName, setFirstName] = useState()
     const [lastName, setLastName] = useState()
@@ -264,11 +267,12 @@ function CreateSellerForm(){
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if(password !== password2){
+        if (password !== password2) {
             openModal(`Account Creation Failed: Passwords Do Not Match`)
         }
-        else{
-            axios.post('http://localhost:5000/auth/signup', {type: "seller", firstName:firstName, lastName: lastName, email: email, password: password,
+        else {
+            axios.post('http://localhost:5000/auth/signup', {
+                type: "seller", firstName: firstName, lastName: lastName, email: email, password: password,
                 country: selectedCountry,
                 seller: {
                     businessName: biz,
@@ -278,18 +282,19 @@ function CreateSellerForm(){
                 oauthUser: OAuthsuccess,
                 oauth: (
                     !OAuthsuccess ? undefined :
-                    {
-                        source: localStorage.getItem("provider"),
-                        jwt: localStorage.getItem("jwt")
-                    } 
+                        {
+                            source: localStorage.getItem("provider"),
+                            jwt: localStorage.getItem("jwt")
+                        }
                 )
             })
-            .then(result => {console.log(result)
-                navigate("/login")
-            })
-            .catch(err=> openModal("Login Failed",`Account Creation Failed: ${err.response.data.reason}`))
+                .then(result => {
+                    console.log(result)
+                    navigate("/login")
+                })
+                .catch(err => openModal("Login Failed", `Account Creation Failed: ${err.response.data.reason}`))
         }
-        
+
     }
 
     //Handles changes to the country dropdown
@@ -315,20 +320,20 @@ function CreateSellerForm(){
             </div>
             {!OAuthsuccess && (
                 <>
-            <div className="InputFields">
-                <strong>Email</strong>
-                <input type="email" placeholder="Ex. Example@email.com" onChange={(e) => setEmail(e.target.value)} />
-            </div>
-            <div className="InputFields">
-                <strong>Password</strong>
-                <input type="password" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} />
-            </div>
-            <div className="InputFields">
-                <strong>Confirm Password</strong>
-                <input type="password" placeholder="Enter password" onChange={(e) => setPassword2(e.target.value)} />
-            </div>
+                    <div className="InputFields">
+                        <strong>Email</strong>
+                        <input type="email" placeholder="Ex. Example@email.com" onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="InputFields">
+                        <strong>Password</strong>
+                        <input type="password" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} />
+                    </div>
+                    <div className="InputFields">
+                        <strong>Confirm Password</strong>
+                        <input type="password" placeholder="Enter password" onChange={(e) => setPassword2(e.target.value)} />
+                    </div>
                 </>
-             )}
+            )}
 
             <strong>Business information</strong>
 
@@ -343,66 +348,69 @@ function CreateSellerForm(){
             </div>
             <div className="InputFields">
                 <strong>Legal Business Name</strong>
-                <input type="text" placeholder="Enter name of business" onChange={e => setBiz(e.target.value)}/>
+                <input type="text" placeholder="Enter name of business" onChange={e => setBiz(e.target.value)} />
             </div>
             <div className="InputFields">
                 <strong>Business Identification Number(BIN)</strong>
-                <input type="text" placeholder="BIN number" onChange={e => setBin(e.target.value)}/>
+                <input type="text" placeholder="BIN number" onChange={e => setBin(e.target.value)} />
             </div>
             <div className="InputFields">
                 <strong>Industry Segment</strong>
                 <select onChange={changeSubType} value={subType}>
                     <option disabled selected>Select an option</option>
-                    <option>Architect</option>
+                    <option>Designer</option>
+                    <option>Dealer</option>
                     <option>Contractor</option>
-                    <option>CAT Employee</option>
+                    <option>Company</option>
                 </select>
             </div>
             <div className="InputFields">
                 <strong>Zipcode</strong>
-                <input type="text" placeholder="Zipcode" onChange={e => setZip(e.target.value)}/>
+                <input type="text" placeholder="Zipcode" onChange={e => setZip(e.target.value)} />
             </div>
-            <button onClick = {handleSubmit}>Continue</button>
+            <button onClick={handleSubmit}>Continue</button>
         </div>
     )
 }
-function CreateBuyerForm(){
+function CreateBuyerForm() {
     const OAuthsuccess = localStorage.getItem("jwt") !== null;
     const [firstName, setFirstName] = useState();
-    const [lastName, setLastName]   = useState();
-    const [email, setEmail]         = useState();
-    const [password, setPassword]   = useState();
-    const [password2, setPassword2]   = useState();
+    const [lastName, setLastName] = useState();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    const [password2, setPassword2] = useState();
     const [selectedCountry, setSelectedCountry] = useState('');
-    const [interest, setInterest]   = useState();
+    const [interest, setInterest] = useState();
     const [postal, setPostal] = useState();
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if(password !== password2){
+        if (password !== password2) {
             openModal(`Account Creation Failed: Passwords Do Not Match`)
         }
-        else{
-            axios.post('http://localhost:5000/auth/signup', 
-            {type: "buyer",firstName:firstName, lastName: lastName, email: email, password: password, country: selectedCountry,
-                buyer: {
-                    interests: [interest],
-                    postalCode: postal
-                },
-                oauthUser: OAuthsuccess,
-                oauth: (
-                    !OAuthsuccess ? undefined :
-                    {
-                        source: localStorage.getItem("provider"),
-                        jwt: localStorage.getItem("jwt")
-                    } 
-                )
-            })
-            .then(result => {console.log(result)
-                navigate("/login")
-            })
-            .catch(err=> openModal("Login Failed",`Account Creation Failed: ${err.response.data.reason}`))
+        else {
+            axios.post('http://localhost:5000/auth/signup',
+                {
+                    type: "buyer", firstName: firstName, lastName: lastName, email: email, password: password, country: selectedCountry,
+                    buyer: {
+                        interests: [interest],
+                        postalCode: postal
+                    },
+                    oauthUser: OAuthsuccess,
+                    oauth: (
+                        !OAuthsuccess ? undefined :
+                            {
+                                source: localStorage.getItem("provider"),
+                                jwt: localStorage.getItem("jwt")
+                            }
+                    )
+                })
+                .then(result => {
+                    console.log(result)
+                    navigate("/login")
+                })
+                .catch(err => openModal("Login Failed", `Account Creation Failed: ${err.response.data.reason}`))
         }
     }
 
@@ -421,28 +429,28 @@ function CreateBuyerForm(){
             <strong>Contact information</strong>
             <div className="InputFields">
                 <strong>First Name</strong>
-                <input type="text" placeholder="Enter first name" onChange={(e) => setFirstName(e.target.value)}/>
+                <input type="text" placeholder="Enter first name" onChange={(e) => setFirstName(e.target.value)} />
             </div>
             <div className="InputFields">
                 <strong>Last Name</strong>
-                <input type="text" placeholder="Enter last name" onChange={(e) => setLastName(e.target.value)}/>
+                <input type="text" placeholder="Enter last name" onChange={(e) => setLastName(e.target.value)} />
             </div>
             {!OAuthsuccess && (
                 <>
-            <div className="InputFields">
-                <strong>Email</strong>
-                <input type="email" placeholder="Ex. Example@email.com" onChange={(e) => setEmail(e.target.value)} />
-            </div>
-            <div className="InputFields">
-                <strong>Password</strong>
-                <input type="password" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} />
-            </div>
-            <div className="InputFields">
-                <strong>Confirm Password</strong>
-                <input type="password" placeholder="Enter password" onChange={(e) => setPassword2(e.target.value)} />
-            </div>
+                    <div className="InputFields">
+                        <strong>Email</strong>
+                        <input type="email" placeholder="Ex. Example@email.com" onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="InputFields">
+                        <strong>Password</strong>
+                        <input type="password" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} />
+                    </div>
+                    <div className="InputFields">
+                        <strong>Confirm Password</strong>
+                        <input type="password" placeholder="Enter password" onChange={(e) => setPassword2(e.target.value)} />
+                    </div>
                 </>
-             )}
+            )}
             <div className="InputFields">
                 <strong>Country</strong>
                 <select value={selectedCountry} onChange={handleCountryChange}>
@@ -454,7 +462,7 @@ function CreateBuyerForm(){
             </div>
             <div className="InputFields">
                 <strong>Postal Code (ZIP in U.S.)</strong>
-                <input type="text" placeholder="Postal Code" onChange={e => setPostal(e.target.value)}/>
+                <input type="text" placeholder="Postal Code" onChange={e => setPostal(e.target.value)} />
             </div>
             <div className="InputFields">
                 <strong>Which of the following best describes you?</strong>
@@ -466,10 +474,10 @@ function CreateBuyerForm(){
                     <option value="no_preference">Just interested in 3D printing construction</option>
                 </select>
             </div>
-            <button onClick = {handleSubmit}>Create Account</button>
+            <button onClick={handleSubmit}>Create Account</button>
         </div>
     )
 }
 
 export default LoginForm
-export{Template, LoginScreenBase, LoginForm, CreateAccountForm, CreateSellerForm, CreateBuyerForm}
+export { Template, LoginScreenBase, LoginForm, CreateAccountForm, CreateSellerForm, CreateBuyerForm }
